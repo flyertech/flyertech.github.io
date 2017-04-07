@@ -1,0 +1,71 @@
+porco:
+  - name: Project1
+    developers:
+      - name: Dev1
+        certifications:
+          - name: cert1
+      - name: Dev2
+        certifications:
+          - name: cert2
+  - name: Project2
+    developers:
+      - name: Dev1
+        certifications:
+          - name: cert3
+      - name: Dev2
+        certifications:
+          - name: cert4
+
+menu:
+    - link: 
+      en: Home
+      it: Home
+    - link: intro
+      en: What is Transactionale
+      it: Cos'è Transactionale
+    - link: engage
+      en: Engage
+      it: Acquisisci
+      sublink: 
+    - link: conversions-tracking
+      en: Conversion tracking
+      it: Tracciamento conversioni
+    - link: double-opt-in
+      en: Double Opt-in
+      it: Doppio Opt-in
+    - link: monetize
+      en: Monetize
+      it: Monetizza
+    - link: web-touchpoints
+      en: Web touchpoints
+      it: Web touchpoints
+    - link: mail-touchpoints
+      en: Mail touchpoints
+      it: Mail touchpoints
+      sublinks:
+        - link: integrations/curl
+          en: cURL integration
+          it: Integrazione cURL
+        - link: integrations/php
+          en: PHP integration
+          it: Integrazione PHP
+        - link: integrations/ruby
+          en: Ruby integration
+          it: Integrazione Ruby
+        - link: integrations/csharp
+          en: C#.net integration
+          it: Integrazione C#.net
+        - link: integrations/python
+          en: Python integration
+          it: Integrazione Python
+        - link: integrations/nodejs
+          en: NodeJS integration
+          it: Integrazione NodeJS
+
+language:
+    en: Language
+    it: Lingua
+integration_example_in:
+    en: Integration example in
+    it: Esempio di integrazione in
+
