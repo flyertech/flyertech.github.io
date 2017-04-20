@@ -30,18 +30,21 @@
                     <li{% if plang=="en" %} class="active" {% endif %}>
                         <a href="/{{ page_nolang }}">EN</a>
                     </li>
-                    {% for l in site.languages %}
-                    <li{% if plang==l %} class="active" {% endif %}>
-                        <a href="/{{ l }}/{{ page_nolang }}">{{ l | upcase }}</a>
+                    <li{% if plang=='it' %} class="active" {% endif %}>
+                        <a href="/it/{{ page_nolang }}">IT</a>
                     </li>
-                    {% endfor %}
+                    <li{% if plang=='de' %} class="active" {% endif %}>
+                        <a href="/de/{{ page_nolang }}">DE</a>
+                    </li>
                 </ul>
                 <br>
                 <ul class="trnav">
                     {% for s in site.data.lang.menu %}
                     {% assign p = url|append:"/"|append:s.link %}
                     <li {% if current == p %}class="active"{% endif %}>
+                        
                         <a href="{{ url }}/{{ s.link }}">{{ s[plang] }}</a>
+
                         {% if s.sublinks %}
                         <ul>
                         {% for sb in s.sublinks %}

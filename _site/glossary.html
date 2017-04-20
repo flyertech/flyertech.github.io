@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link href="/css/styles.css" rel="stylesheet">
 <script src="https://use.fontawesome.com/6e348fdec8.js"></script>
-<title>C# example implementation</title>
+<title>Glossary</title>
 </head>
 
 <body>
@@ -35,13 +35,13 @@
                 </p>
                 <ul class="nav nav-pills">
                     <li class="active" >
-                        <a href="/integrations/csharp">EN</a>
+                        <a href="/glossary">EN</a>
                     </li>
                     <li>
-                        <a href="/it/integrations/csharp">IT</a>
+                        <a href="/it/glossary">IT</a>
                     </li>
                     <li>
-                        <a href="/de/integrations/csharp">DE</a>
+                        <a href="/de/glossary">DE</a>
                     </li>
                 </ul>
                 <br>
@@ -125,7 +125,7 @@
                         </li>
                         
                         
-                        <li  class="active">
+                        <li  >
                             <a href="http://localhost:4000/integrations/csharp">C#.net integration</a>
                         </li>
                         
@@ -146,24 +146,43 @@
                 </ul>
             </aside>
             <section class="main col-md-9">
-                <h2>C# example implementation</h2>
-                
-<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// These code snippets use an open-source library. http://unirest.io/net
-</span><span class="n">Task</span><span class="p">&lt;</span><span class="n">HttpResponse</span><span class="p">&lt;</span><span class="n">MyClass</span><span class="p">&gt;&gt;</span> <span class="n">response</span> <span class="p">=</span> <span class="n">Unirest</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="s">"https://www.transactionale.com/api/v1/transaction"</span><span class="p">)</span>
-  <span class="p">.</span><span class="nf">header</span><span class="p">(</span><span class="s">"X-Authorization"</span><span class="p">,</span> <span class="s">"YOUR_API_KEY"</span><span class="p">)</span>
-  <span class="p">.</span><span class="nf">header</span><span class="p">(</span><span class="s">"Content-Type"</span><span class="p">,</span> <span class="s">"application/json"</span><span class="p">)</span>
-  <span class="p">.</span><span class="nf">header</span><span class="p">(</span><span class="s">"Accept"</span><span class="p">,</span> <span class="s">"application/json"</span><span class="p">)</span>
-  <span class="p">.</span><span class="nf">body</span><span class="p">(</span><span class="s">"{ \"email\" : \"your-customer-email@mailprovider.com\", \"country\":\"it\", \"first_name\":\"customer-name\", \"zip_code\":\"00001\" }"</span><span class="p">)</span>
-  <span class="p">.</span><span class="nf">asJson</span><span class="p">();</span></code></pre></figure>
-
-<p>Some notes:</p>
+                <h2>Glossary</h2>
+                <h4 id="cms">CMS</h4>
 
 <ul>
-  <li>We use <a href="http://unirest.io/">Unirest</a> in our examples, but feel free to use <strong>any framework or library capable of making HTTP POST requests</strong></li>
-  <li><strong>Remember to customise the variables in the examples - the snippet will not work as-is</strong></li>
-  <li>You have a personal API key in the Integrate section of your account. Copy that key and subsitute it in the snippet where <code class="highlighter-rouge">YOUR_API_KEY</code> is noted</li>
-  <li>The HTTP request’s content type must be <code class="highlighter-rouge">application/json</code> <em>(the example should already take care of this)</em></li>
-  <li>The body of the HTTP request must contain <strong>a JSON-encoded object with your data</strong> <em>(the example should already take care of this)</em></li>
+  <li>A Content Management System (CMS) is a site that is not developed from scratch, but pre-built and easily expandable (also by non techies); with an administrative backend, pre-made graphic templates and pluggable modules. If you happen to use <em>Wordpress</em>, <em>Magento</em>, <em>PrestaShop</em>, <em>Shopify</em>, <em>OpenCart</em> and so on, it means your shop uses a CMS.</li>
+</ul>
+
+<h4 id="conversion">Conversion</h4>
+
+<ul>
+  <li>A conversion is generated when an action (in our case, the generation of a lead) results in the placement of an actual order on a shop, immediately or after the customer becomes acquainted with the shop.</li>
+  <li>A <strong>direct conversion</strong> happens when we can directly track a conversion as resulting from a lead.</li>
+</ul>
+
+<h4 id="lead">Lead</h4>
+
+<ul>
+  <li>A lead is <em>generated</em> for a shop the first time a customer lands on the shop by clicking on an ad.</li>
+</ul>
+
+<h4 id="snippet">Snippet</h4>
+
+<ul>
+  <li>A piece of code that you must integrate in your website.</li>
+  <li>Some snippets must be copied <em>verbatim</em>, others must be modified and integrated with dynamic data produced by your website. It’s always best to check with a developer what you need to do.</li>
+</ul>
+
+<h4 id="touchpoint">Touchpoint</h4>
+
+<ul>
+  <li>A touchpoint is any mean of interaction between the shop and the customer (like call centers, ads, transactional e-mails).</li>
+</ul>
+
+<h4 id="transactional-e-mail">Transactional e-mail</h4>
+
+<ul>
+  <li>Anytime a mail is sent as a result of a <em>transaction</em> it is called <em>transactional</em>.</li>
 </ul>
 
             </section>

@@ -1,6 +1,5 @@
 ---
 layout: docs
 title: Home
-permalink: it/
-lang: it
+permalink: /
 ---
