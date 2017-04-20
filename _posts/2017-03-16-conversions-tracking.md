@@ -3,14 +3,21 @@ layout: docs
 title:  "Conversions tracking"
 permalink: conversions-tracking
 ---
-### What is conversion tracking?
+### What is conversion tracking
 
-When a customer redeems 
+After receiving a **transactional email**, the customer lands on your site. If he/she chooses to redeem your coupon/offer, the **lead** becomes a **direct conversion**.
 
-### How do I implement conversion tracking?
+We can track those conversions for you if they happen within 28 days from the user's first access to your site.
 
-> You have to make sure the <a href="/engage">integration snippet</a> is present **in your campaigns' landing pages**.
-> We will track conversions that happen within 28 days from the user’s first access.
+### How does it technically work
+
+When you **create a campaign**, you always specify a **landing page** for the offer. 
+
+On **that page** you must include the **conversion tracking snippet**.
+
+### How do I implement conversion tracking (technical details)
+
+> First of all, you have to make sure the <a href="/engage">integration snippet</a> is present **in your campaigns' landing pages**.
 
 Place the following snippet in the section of your order confirmation page. 
 
