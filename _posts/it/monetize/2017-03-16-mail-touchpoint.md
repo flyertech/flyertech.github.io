@@ -4,7 +4,8 @@ title:  "Integrazione del touchpoint mail (server-side)"
 permalink: it/mail-touchpoints
 lang: it
 ---
-Se abilitata, Transactionale manda un'email ai tuoi client a nome tuo per ogni transazione che essi fanno sul tuo sito. Per permettere questa operazione, bisogna chiamare la nostra API REST dopo ogni ordine che ricevi. Le chiamate all'API devono essere autenticate con la chiave API (API key) che troverai nella sezione "Integrazione" del tuo Account. 
+
+Se abilitata, {{ site.brand }} manda un'email ai tuoi client a nome tuo per ogni transazione che essi fanno sul tuo sito. Per permettere questa operazione, bisogna chiamare la nostra API REST dopo ogni ordine che ricevi. Le chiamate all'API devono essere autenticate con la chiave API (API key) che troverai nella sezione "Integrazione" del tuo Account. 
 Sono richiesti solo tre campi dati, di cui l'ultimo opzionale:
 
 * Country (Stato): il codice nazionale ISO di due lettere (`IT`, `DE` ...) per la nazione sulla quale è stato piazzato l'ordine
