@@ -199,3 +199,8 @@ ul.trnav {
     ul.trnav li ul {
       margin: 0;
       padding: 0 0 0 15px; }
+
+hr {
+  border-top-color: #d0d0d0;
+  margin-left: 50px;
+  margin-right: 50px; }
