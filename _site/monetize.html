@@ -83,14 +83,6 @@
                     
                     <li >
                         
-                        <a href="http://localhost:4000/web-touchpoints">Web touchpoints</a>
-
-                        
-                    </li>
-                    
-                    
-                    <li >
-                        
                         <a href="http://localhost:4000/mail-touchpoints">Mail touchpoints</a>
 
                         
@@ -121,22 +113,23 @@
 
 <h3 id="how-does-it-technically-work">How does it technically work</h3>
 
-<p>In order to do that, you must <strong>send Bob a transactional email with the offers</strong> immediately after he orders (actually, you <strong>notify us</strong> of the order and we send Bob the mail posing as you).</p>
+<p>In order to do that, you must <strong>send Bob a transactional email with the offers</strong> immediately after he orders (actually, your e-shop <strong>notifies us</strong> of the order and we send Bob the e-mail posing as you).</p>
 
 <blockquote>
   <p>If your shop is based on <strong>WooCommerce</strong>, <strong>PrestaShop</strong> or <strong>Magento</strong> we can provide ready-made integration plugins that will install with no effort and can be fully configured on your backend with virtually no technical involvement.</p>
 </blockquote>
 
-<p>For all other scenarios, the same is possible with our simple <strong>code integration snippets</strong>, as explained below.</p>
+<p>For all other scenarios, you can prompt the transactional email with our simple <strong>code integration snippets</strong>, as explained below.</p>
 
 <h3 id="what-do-i-need-to-do-technical-details">What do I need to do (technical details)</h3>
 
-<p>You must ensure that anytime the user finalizes an order - it usually happens on the <strong>order confirmation page</strong> - your system communicates the details with ours.
+<p>You must ensure that <strong>everytime an user finalizes an order</strong> - it usually happens on the <strong>order confirmation page</strong> - your system communicates the details with ours.
 This happens by integrating an <strong>call to our API service</strong>.</p>
 
 <blockquote>
-  <p>This communication <strong>should not be delayed</strong>. We have ample evidence that the customer is much more likely to open the transactional email if he/she receives it with the order confirmation mail.<br />
-If you delay the API call for some reason (f. ex. to do it in bulk calls at a certain point of the night), the open rate decreases dramatically, thus hindering any effectiveness of the network.</p>
+  <p>This communication <strong>should not be delayed</strong>. We have ample evidence that the customer is much more likely to open the transactional email if he/she receives it with the order confirmation mail</p>
+
+  <p>If you delay the API call for some reason (f. ex. to do it in bulk calls at a certain point of the night), the open rate decreases dramatically, thus hindering any effectiveness of the network. The ideal scenario is that the user receives the transactional email <em>right after</em> the <strong>order confirmation email</strong>.</p>
 </blockquote>
 
 <p>The integration details <strong>heavily depend upon your CMS/implementation and your server’s language</strong>. <a href="/mail-touchpoints">Click here for all the technical details and instruction.</a></p>
@@ -147,7 +140,8 @@ If you delay the API call for some reason (f. ex. to do it in bulk calls at a ce
     <footer class="container">
     <div class="row">
         <div class="col-lg-12">
-            &copy; <a href="mailto:your-email@domain.com">FlyerTech s.r.l.</a> 2015-2017
+            <a href="http://www.transactionale.com">Transactionale</a> -
+            &copy; <a href="mailto:info@transactionale.com">FlyerTech s.r.l.</a> 2015 - 2017
         </div>
     </div>
 </footer>
