@@ -18,9 +18,9 @@ menu:
     - link: monetize
       en: Monetize
       it: Monetizza
-    - link: web-touchpoints
-      en: Web touchpoints
-      it: Web touchpoints
+#    - link: web-touchpoints
+#      en: Web touchpoints
+#      it: Web touchpoints
     - link: mail-touchpoints
       en: Mail touchpoints
       it: Mail touchpoints
