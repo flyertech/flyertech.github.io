@@ -123,35 +123,16 @@ Questo ti permetterà di acquisire <strong>lead</strong> qualificati che hanno u
 
 <h3 id="cosa-devo-fare-dettagli-tecnici">Cosa devo fare (dettagli tecnici)</h3>
 
-<p>You must ensure that your website displays this snippet in <em>any</em> of its pages’ HTML code, just before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag.</p>
+<p>Devi assicurarti che il tuo sito mostri questo codice nel codice HTML di <em>ogni</em> sua pagina, piazzato appena prima del tag di chiusura <code class="highlighter-rouge">&lt;/body&gt;</code>.</p>
 
 <blockquote>
-  <p><strong>IMPORTANT!</strong> This snippet is <strong>required</strong> to enable <a href="/conversions-tracking">conversion tracking</a> and double opt-in.</p>
+  <p><strong>IMPORTANTE!</strong> Questo snippet è <strong>necessario</strong> anche per attivare il <a href="/it/conversions-tracking">conversion tracking</a> e il doppio opt-in.</p>
 </blockquote>
 
-<p>In order to do this, check with your webmaster whether you must modify a template of your CMS or integrate it manually in your code.</p>
+<p>Per fare questo, controlla col tuo sviluppatore se è necessario modificare un template nel tuo CMS o integrarlo manualmente nel codice del tuo sito.</p>
 
 <blockquote>
-  <p>This particular snippet can be copied <em>as-is</em>.</p>
-</blockquote>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- TRANSACTIONALE CODE - DO NOT EDIT! --&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-    <span class="kd">var</span> <span class="nx">_tr_run</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">if</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'tr=1'</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">td</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'div'</span><span class="p">);</span> <span class="nx">td</span><span class="p">.</span><span class="nx">id</span><span class="o">=</span><span class="s1">'transactionale'</span><span class="p">;</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">td</span><span class="p">);</span>
-        <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span>
-        <span class="nx">s</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://www.transactionale.com/embedded/popup'</span><span class="o">+</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">search</span><span class="p">;</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'head'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
-        <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span> <span class="nx">_tr_runTransactionale</span><span class="p">(</span><span class="s1">'transactionale'</span><span class="p">,</span> <span class="nx">d</span><span class="p">.</span><span class="nx">html</span><span class="p">,</span> <span class="nx">d</span><span class="p">.</span><span class="nx">js</span><span class="p">);</span> <span class="p">}</span>
-    <span class="p">})();</span>
-<span class="nt">&lt;/script&gt;</span>
-<span class="c">&lt;!-- /TRANSACTIONALE CODE - DO NOT EDIT! --&gt;</span></code></pre></figure>
-
-<p>Incolla questo pezzo di codice nel codice HTML del tuo sito, appena prima il tag <code class="highlighter-rouge">&lt;/body&gt;</code> di chiusura.</p>
-
-<blockquote>
-  <p><strong>IMPORTANTE!</strong> Questo snippet è <strong>necessario</strong> per abilitare <a href="/it/conversions-tracking">il tracciamento delle conversioni</a> e <a href="/it/double-opt-in">il double opt-in</a>.</p>
+  <p>Questo particolare snippet può essere integrato <em>così com’è</em>.</p>
 </blockquote>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- TRANSACTIONALE CODE - DO NOT EDIT! --&gt;</span>

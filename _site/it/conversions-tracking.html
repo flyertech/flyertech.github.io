@@ -100,40 +100,64 @@
             </aside>
             <section class="main col-md-9">
                 <h2>Tracciamento conversioni</h2>
-                <blockquote>
-  <p><strong>IMPORTANTE!</strong> Assicuratevi che lo <a href="/it/engage">snippet di integrazione</a> sia presente nelle landing page delle vostre campagne.
-Tracceremo le conversioni nei 28 giorni successivi al primo accesso del vostro utente.</p>
+                <h3 id="cosè-il-tracciamento-delle-conversioni">Cos’è il tracciamento delle conversioni</h3>
+
+<p>Dopo aver ricevuto una <strong>email transazionale</strong>, il cliente atterra sul tuo sito. Se lui/lei sceglie di reclamare il tuo coupon (o offerta), il <strong>lead</strong> diventa una <strong>conversione diretta</strong>.</p>
+
+<p>Possiamo tracciare queste conversioni se avvengono entro 28 giorni dal primo accesso dell’utente al tuo sito.</p>
+
+<h3 id="come-funziona">Come funziona</h3>
+
+<p>Quando <strong>crei una campagna</strong>, specifichi sempre una <strong>landing page</strong> per la tua offerta speciale.</p>
+
+<p>Nel codice di <strong>quella stessa pagina</strong> bisogna includere lo <strong>snippet di codice per il conversion tracking</strong>.</p>
+
+<h3 id="come-lo-implemento-dettagli-tecnici">Come lo implemento (dettagli tecnici)</h3>
+
+<blockquote>
+  <p>Per prima cosa, devi assicurarti che lo <a href="/it/engage">snippet di integrazione</a> sia stato implementato in tutte le pagine del sito.</p>
 </blockquote>
 
-<p>Place the following snippet in the section of your order confirmation page.</p>
+<p>Piazza il seguente snippet nella tua <strong>pagina di conferma ordine</strong>.</p>
 
-<p>Replace the <code class="highlighter-rouge">&lt;amount&gt;</code>, <code class="highlighter-rouge">&lt;currency&gt;</code> and <code class="highlighter-rouge">&lt;order_id&gt;</code> placeholders with the appropriate values.</p>
+<p>Sostituisci ai segnaposti <code class="highlighter-rouge">&lt;ammontare&gt;</code>, <code class="highlighter-rouge">&lt;valuta&gt;</code> e <code class="highlighter-rouge">&lt;id_ordine&gt;</code> i valori reali.</p>
 
-<p>The <code class="highlighter-rouge">amount</code> can be either a number or a string, with a dot separator for decimals.</p>
+<p>L’<code class="highlighter-rouge">&lt;ammontare&gt;</code> dell’ordine può essere numero o stringa, con un punto che separa i decimali.</p>
 
-<p>The <code class="highlighter-rouge">currency</code> is the ISO 3 letter code, i.e. <code class="highlighter-rouge">EUR</code>.</p>
+<p>La <code class="highlighter-rouge">&lt;valuta&gt;</code> va passata come stringa nel formato ISO di 3 caratteri, ad es. <code class="highlighter-rouge">GPB</code>, <code class="highlighter-rouge">EUR</code>. <br />
+<strong>Dato che è una stringa</strong> assicurati che sia racchiusa tra virgolette.</p>
 
-<p>The <code class="highlighter-rouge">order_id</code> is a string and it’s optional</p>
+<p>L’<code class="highlighter-rouge">&lt;id_ordine&gt;</code> è una stringa ed è opzionale.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://www.transactionale.com/conversion/js/v1/conversion.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script&gt;</span>
-    <span class="nx">_tr_conversion</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">amount</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">currency</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">order_id</span><span class="o">&gt;</span><span class="p">);</span>
+    <span class="nx">_tr_conversion</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">ammontare</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">valuta</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">order_id</span><span class="o">&gt;</span><span class="p">);</span>
 <span class="nt">&lt;/script&gt;</span></code></pre></figure>
 
+<h3 id="ok-allora-devo-semplicemente-copiare-questo-testo-sul-mio-sito">Ok, allora devo semplicemente copiare questo testo sul mio sito?</h3>
+
 <blockquote>
-  <p><strong>Please adapt this code to your particular environment.</strong> For example, if you are implementing in PHP, make sure to pass the correct variables:</p>
+  <p><strong>No. Ricorda che devi adattare questo codice al tuo ambiente.</strong> Questo significa che, ad esempio, <code class="highlighter-rouge">&lt;ammontare&gt;</code> è solo un segnaposto d’esempio che rappresenta una variabile JavaScript, che deve essere generata/passata dal tuo server con una sintassi corretta (incluse le virgolette se si tratta di una stringa).</p>
 </blockquote>
 
+<p>Come esempio, se il tuo sito è scritto in PHP, devi passare le variabili necessarie dal tuo sito/CMS, usando le funzioni che il tuo sito ha nativamente per prelevare i dati corretti e inserirli nel JavaScript:</p>
+
 <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="c1">// Ricorda che questo è un **esempio**.
+// Perciò le funzioni getOrderAmount() and getOrderCurrency() sono solo
+// di esempio. Per favore adatta l'implementazione al tuo software/CMS!
+</span><span class="nv">$orderId</span> <span class="o">=</span> <span class="nv">$currentOrder</span><span class="p">[</span><span class="s1">'id'</span><span class="p">];</span>
 <span class="nv">$amount</span> <span class="o">=</span> <span class="nx">getOrderAmount</span><span class="p">(</span><span class="nv">$orderId</span><span class="p">);</span>
-<span class="nv">$currency</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nx">getOrderCurrency</span><span class="p">(</span><span class="nv">$orderId</span><span class="p">));</span>
+<span class="c1">// Ricordati che la valuta (currency) è una stringa, pertanto richiede *virgolette*.
+// Su PHP è possibile crearle con json_encode().
+</span><span class="nv">$currency</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nx">getOrderCurrency</span><span class="p">(</span><span class="nv">$orderId</span><span class="p">));</span>
 <span class="cp">?&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://www.transactionale.com/conversion/js/v1/conversion.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script&gt;</span><span class="err">
     _tr_conversion(</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$amount</span><span class="cp">?&gt;</span><span class="err">, </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$currency</span> <span class="cp">?&gt;</span><span class="err">, </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$orderId</span> <span class="cp">?&gt;</span> <span class="p">);</span>
 <span class="nt">&lt;/script&gt;</span></code></pre></figure>
 
-<p>For example, if the order is 12.30 EUR, and has an id :</p>
+<p>Così, se il vostro cliente finalizza un ordine da 12.30€, con un id ordine 27894, il codice PHP dovrà produrre il seguente JavaScript:</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://www.transactionale.com/conversion/js/v1/conversion.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script&gt;</span>
