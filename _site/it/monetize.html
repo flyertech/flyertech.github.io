@@ -106,14 +106,14 @@
 
 <ol>
   <li>aumenti <strong>il gradimento dell’esperienza di acquisto</strong> di Mario perché gli presenti offerte interessanti</li>
-  <li>ogni volta che un’offerta genera un <strong>lead</strong> (ovvero Mario clicca sull’offerta e atterra per la prima volta sul sito che si sta pubblicizzando), c’è un <strong>guadagno</strong>.</li>
+  <li>ogni volta che un’offerta genera un <strong>lead</strong> (ovvero Mario clicca sull’offerta e atterra per la prima volta sul sito pubblicizzato), c’è un <strong>guadagno</strong> per te.</li>
 </ol>
 
-<p>In aggiunta, se sei anche un <a href="/it/engage"><strong>advertiser</strong></a>, potrai reinvestire se vuoi uesti soldi per la tua lead generation, in pratica autosostentandola.</p>
+<p>In aggiunta, se sei anche un <a href="/it/engage"><strong>advertiser</strong></a>, potrai reinvestire se vuoi questi soldi per la tua lead generation, in pratica autosostentandola.</p>
 
 <h3 id="come-funziona">Come funziona</h3>
 
-<p>Per farlo, devi <strong>mandare a Mario una email transazionale con le offerte</strong> immediatamente dopo che egli ordina (in realtà, il tuo e-shop <strong>ci notifica</strong> dell’avvenuto ordine e noi mandiamo a Mario l’e-mail come se partisse da te).</p>
+<p>Per farlo, devi <strong>mandare a Mario una email transazionale con le offerte</strong>, immediatamente dopo che egli ordina (in realtà, è il tuo e-shop che per mezzo delle integrazionoi software <strong>ci notifica</strong> dell’avvenuto ordine, e noi mandiamo a Mario l’e-mail transazionale come se partisse da te).</p>
 
 <blockquote>
   <p>Se il tuo shop è basato su <strong>WooCommerce</strong>, <strong>PrestaShop</strong> o <strong>Magento</strong> possiamo fornirti plug-in di integrazione già pronti, che potrai installare senza sforzo e che potranno essere completamente configurati dal tuo backend, senza praticamente nessun intervento tecnico.</p>
@@ -123,16 +123,57 @@
 
 <h3 id="cosa-devo-fare-dettagli-tecnici">Cosa devo fare (dettagli tecnici)</h3>
 
-<p>Devi assicurarti che <strong>ogni volta che un cliente finalizza un ordine</strong> - cosa che in genere succede sulla <strong>pagina di conferma ordine</strong> - il tuo sistema comunichi i dettagli al nostro.
-Questo avviene integrando <strong>chiamate al notro servizio API</strong>.</p>
+<p><strong>Ogni volta che un cliente finalizza un ordine</strong> - cosa che in genere succede sulla <strong>pagina di conferma ordine</strong> - il tuo sistema <strong>deve comunicarne alcuni dettagli al nostro</strong> con una <strong>chiamata al notro servizio API</strong>.</p>
 
 <blockquote>
-  <p>Questa comunicazione <strong>non deve essere ritardata</strong>. Abbiamo ampia evidenza che la probabilità che il cliente apra la mail transazionale è molto più alta se tale mail è ricevuta insieme alla mail di conferma dell’ordine.</p>
+  <p>Questa comunicazione <strong>non dovrebbe essere ritardata</strong>. Abbiamo ampia evidenza che la probabilità che il cliente apra la mail transazionale è molto più alta se tale mail è ricevuta insieme alla mail di conferma dell’ordine.</p>
 
   <p>Se ritardi la chiamata alle nostre API per qualche motivo (ad. es. per farle in blocco di notte), la <em>open rate</em> (tasso di apertura) delle mail scende in maniera sostanziale, di fatto compromettendo l’efficacia del network. Lo scenario ideale è che l’acquirente riceva la mail transazionale <em>immediatamente dopo</em> la <strong>mail di conferma ordine</strong>.</p>
 </blockquote>
 
-<p>I dettagli dell’integrazione <strong>dipendono molto dal tuo CMS/implementazione e dal linguaggio del tuo server</strong>. <a href="/it/mail-touchpoints">Clicca qui per tutti i dettagli tecnici e le istruzioni</a>.</p>
+<p>I dettagli dell’integrazione <strong>dipendono molto dal tuo CMS/implementazione e dal linguaggio del tuo server</strong>.</p>
+
+<p>Le chiamate all’API devono essere autenticate con la <strong>chiave API (API key)</strong> che troverai nella sezione “Integrazione (Integrate)” del tuo Account.</p>
+
+<h4 id="quali-dati-vengono-inviati">Quali dati vengono inviati</h4>
+
+<p>Sono richiesti solo tre campi dati, di cui l’ultimo opzionale:</p>
+
+<ul>
+  <li><strong>Country</strong> (Stato): il codice nazionale ISO di due lettere (<code class="highlighter-rouge">IT</code>, <code class="highlighter-rouge">DE</code> …) per la nazione sulla quale è stato piazzato l’ordine</li>
+  <li><strong>Email</strong>: l’indirizzo email del cliente</li>
+  <li><strong>First name (Nome)</strong>: il nome proprio del cliente, in modo da potergli mandare una mail personalizzata</li>
+  <li><strong>Zip code (CAP)</strong>: se verrà fornito un codice CAP del cliente (<em>Zip Code</em> fuori dall’Italia), verranno fornite con priorità più alta le campagne geolocalizzate, in modo che siano più efficaci</li>
+</ul>
+
+<h4 id="esempi-di-integrazione">Esempi di integrazione</h4>
+
+<p>La chiamata API è molto semplice. Di seguito troverete esempi nei linguaggi di programmazione più comuni.</p>
+
+<blockquote>
+  <p>NOTA: è possibile integrare questa chiamata lato client, ma suggeriamo di implementarla lato server per motivi di sicurezza, perché coinvolge informazioni sensibili. Siete tuttavia liberi di optare per la strategia che riterrete opportuna.</p>
+</blockquote>
+
+<p>Abbiamo un po’ di esempi nei linguaggi server-side più comuni:</p>
+
+<ul>
+  <li><a href="./integrations/php">Esempio di integrazione in PHP</a></li>
+  <li><a href="./integrations/ruby">Esempio di integrazione in Ruby</a></li>
+  <li><a href="./integrations/python">Esempio di integrazione in Python</a></li>
+  <li><a href="./integrations/nodejs">Esempio di integrazione in NodeJS</a></li>
+  <li><a href="./integrations/csharp">Esempio di integrazione in C#</a></li>
+  <li><a href="./integrations/curl">Esempio di integrazione in cURL</a></li>
+</ul>
+
+<h4 id="qualche-nota">Qualche nota</h4>
+
+<ul>
+  <li>Qui usiamo la libreria <a href="http://unirest.io/">Unirest</a> nei nostri esempi, ma <strong>potete usare liberamente qualsiasi framework o libreria in grado di fare request POST via HTTP</strong></li>
+  <li><strong>Quando copiate l’esempio ricordatevi di personalizzare le variabili usate negli esempi - lo snippet di codice non funzinerà se lasciato come nell’esempio</strong></li>
+  <li>Avete una API key personale nella sezione “Integrazione” del vostro account. Copiate questa chiave e sostituitela nel codice al posto della stringa <code class="highlighter-rouge">YOUR_API_KEY</code></li>
+  <li>Il content type della request HTTP deve essere <code class="highlighter-rouge">application/json</code> <em>(nell’esempio questo header viene già impostato)</em></li>
+  <li>Il body della request HTTP request deve contenere <strong>i dati d’interesse codificati come JSON</strong> <em>(l’esempio mostra come)</em></li>
+</ul>
 
             </section>
         </div>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-04-27T12:25:46+02:00</updated><id>http://localhost:4000/</id><title type="html">Transactionale Docs</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-04-27T12:44:23+02:00</updated><id>http://localhost:4000/</id><title type="html">Transactionale Docs</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </subtitle><entry><title type="html">Web touchpoint integration</title><link href="http://localhost:4000/web-touchpoints" rel="alternate" type="text/html" title="Web touchpoint integration" /><published>2017-03-16T00:00:00+01:00</published><updated>2017-03-16T00:00:00+01:00</updated><id>http://localhost:4000/web-touchpoint</id><content type="html" xml:base="http://localhost:4000/web-touchpoints">&lt;p&gt;If you prefer not to send one more email to your customers, you can use &lt;strong&gt;web touchpoints&lt;/strong&gt;.
 Web touchpoints define areas in your website where we will display ads with the same criteria as our transactional emails, but the email address will only be shared:&lt;/p&gt;
 &lt;ul&gt;
@@ -98,44 +98,7 @@ This is an example of Web touchpoint snippet:&lt;/p&gt;
     var _trs = document.createElement('script');
     _trs.src = 'https://www.transactionale.com/touchpoints/1/embed?auth=XXXXX&amp;zip_code=' + _trzip + '';
         document.getElementsByTagName('head')[0].appendChild(_trs);
-&lt;/script&gt;</content><author><name></name></author><summary type="html">If you prefer not to send one more email to your customers, you can use web touchpoints. Web touchpoints define areas in your website where we will display ads with the same criteria as our transactional emails, but the email address will only be shared: after the user clicks on an advertisement (implicit opt-in) after accepting the advertiser’s privacy policy (double opt-in).</summary></entry><entryxml:lang="it"><title type="html">Integrazione del touchpoint mail (server-side)</title><link href="http://localhost:4000/it/mail-touchpoints" rel="alternate" type="text/html" title="Integrazione del touchpoint mail (server-side)" /><published>2017-03-16T00:00:00+01:00</published><updated>2017-03-16T00:00:00+01:00</updated><id>http://localhost:4000/it/mail-touchpoint</id><content type="html" xml:base="http://localhost:4000/it/mail-touchpoints">&lt;p&gt;Se abilitata, Transactionale manda un’email ai tuoi client a nome tuo per ogni transazione che essi fanno sul tuo sito. Per permettere questa operazione, bisogna chiamare la nostra API REST dopo ogni ordine che ricevi. Le chiamate all’API devono essere autenticate con la chiave API (API key) che troverai nella sezione “Integrazione” del tuo Account. 
-Sono richiesti solo tre campi dati, di cui l’ultimo opzionale:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Country (Stato): il codice nazionale ISO di due lettere (&lt;code class=&quot;highlighter-rouge&quot;&gt;IT&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;DE&lt;/code&gt; …) per la nazione sulla quale è stato piazzato l’ordine&lt;/li&gt;
-  &lt;li&gt;Email: l’indirizzo email del cliente&lt;/li&gt;
-  &lt;li&gt;First name (Nome): il nome proprio del cliente, in modo da potergli mandare una mail personalizzata&lt;/li&gt;
-  &lt;li&gt;Zip code (CAP): se verrà fornito un codice CAP del cliente (Zip Code fuori dall’Italia), verranno fornite con priorità più alta le campagne geolocalizzate, in modo che siano più efficaci&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;La chiamata API è molto semplice. Di seguito troverete esempi nei linguaggi di programmazione più comuni.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;NOTA: è possibile integrare questa chiamata lato client, ma suggeriamo di implementarla lato server per motivi di sicurezza, perché coinvolge informazioni sensibili. Siete tuttavia liberi di optare per la strategia che riterrete opportuna.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;esempi-di-integrazione&quot;&gt;Esempi di integrazione&lt;/h3&gt;
-
-&lt;p&gt;Abbiamo un po’ di esempi nei linguaggi server-side più comuni:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;./integrations/php&quot;&gt;Esempio di integrazione in PHP&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;./integrations/ruby&quot;&gt;Esempio di integrazione in Ruby&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;./integrations/python&quot;&gt;Esempio di integrazione in Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;./integrations/nodejs&quot;&gt;Esempio di integrazione in NodeJS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;./integrations/csharp&quot;&gt;Esempio di integrazione in C#&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;./integrations/curl&quot;&gt;Esempio di integrazione in cURL&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Qualche nota:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Qui usiamo la libreria &lt;a href=&quot;http://unirest.io/&quot;&gt;Unirest&lt;/a&gt; nei nostri esempi, ma &lt;strong&gt;potete usare liberamente qualsiasi framework o libreria in grado di fare request POST via HTTP&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Quando copiate l’esempio ricordatevi di personalizzare le variabili usate negli esempi - lo snippet di codice non funzinerà se lasciato come nell’esempio&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Avete una API key personale nella sezione “Integrazione” del vostro account. Copiate questa chiave e sostituitela nel codice al posto della stringa &lt;code class=&quot;highlighter-rouge&quot;&gt;YOUR_API_KEY&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Il content type della request HTTP deve essere &lt;code class=&quot;highlighter-rouge&quot;&gt;application/json&lt;/code&gt; &lt;em&gt;(nell’esempio questo header viene già impostato)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Il body della request HTTP request deve contenere &lt;strong&gt;i dati d’interesse codificati come JSON&lt;/strong&gt; &lt;em&gt;(l’esempio mostra come)&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Se abilitata, Transactionale manda un’email ai tuoi client a nome tuo per ogni transazione che essi fanno sul tuo sito. Per permettere questa operazione, bisogna chiamare la nostra API REST dopo ogni ordine che ricevi. Le chiamate all’API devono essere autenticate con la chiave API (API key) che troverai nella sezione “Integrazione” del tuo Account. Sono richiesti solo tre campi dati, di cui l’ultimo opzionale:</summary></entry><entry><title type="html">Esempio di integrazione Ruby</title><link href="http://localhost:4000/it/integrations/ruby" rel="alternate" type="text/html" title="Esempio di integrazione Ruby" /><published>2017-03-16T00:00:00+01:00</published><updated>2017-03-16T00:00:00+01:00</updated><id>http://localhost:4000/it/integrations/ruby</id><content type="html" xml:base="http://localhost:4000/it/integrations/ruby">&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# These code snippets use an open-source library. http://unirest.io/ruby&lt;/span&gt;
+&lt;/script&gt;</content><author><name></name></author><summary type="html">If you prefer not to send one more email to your customers, you can use web touchpoints. Web touchpoints define areas in your website where we will display ads with the same criteria as our transactional emails, but the email address will only be shared: after the user clicks on an advertisement (implicit opt-in) after accepting the advertiser’s privacy policy (double opt-in).</summary></entry><entryxml:lang="it"><title type="html">Integrazione del touchpoint mail (server-side)</title><link href="http://localhost:4000/it/mail-touchpoints" rel="alternate" type="text/html" title="Integrazione del touchpoint mail (server-side)" /><published>2017-03-16T00:00:00+01:00</published><updated>2017-03-16T00:00:00+01:00</updated><id>http://localhost:4000/it/mail-touchpoint</id><content type="html" xml:base="http://localhost:4000/it/mail-touchpoints"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Esempio di integrazione Ruby</title><link href="http://localhost:4000/it/integrations/ruby" rel="alternate" type="text/html" title="Esempio di integrazione Ruby" /><published>2017-03-16T00:00:00+01:00</published><updated>2017-03-16T00:00:00+01:00</updated><id>http://localhost:4000/it/integrations/ruby</id><content type="html" xml:base="http://localhost:4000/it/integrations/ruby">&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# These code snippets use an open-source library. http://unirest.io/ruby&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Unirest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://www.transactionale.com/api/v1/transaction&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;
     &lt;span class=&quot;s2&quot;&gt;&quot;X-Authorization&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;YOUR_API_KEY&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
@@ -149,7 +112,7 @@ Sono richiesti solo tre campi dati, di cui l’ultimo opzionale:&lt;/p&gt;
     &lt;span class=&quot;s2&quot;&gt;&quot;zip_code&quot;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:&quot;00001&quot;&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_json&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Qualche nota:&lt;/p&gt;
+&lt;h4 id=&quot;qualche-nota&quot;&gt;Qualche nota&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Qui usiamo la libreria &lt;a href=&quot;http://unirest.io/&quot;&gt;Unirest&lt;/a&gt; nei nostri esempi, ma &lt;strong&gt;potete usare liberamente qualsiasi framework o libreria in grado di fare request POST via HTTP&lt;/strong&gt;&lt;/li&gt;
@@ -172,7 +135,7 @@ Sono richiesti solo tre campi dati, di cui l’ultimo opzionale:&lt;/p&gt;
   &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Qualche nota:&lt;/p&gt;
+&lt;h4 id=&quot;qualche-nota&quot;&gt;Qualche nota&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Qui usiamo la libreria &lt;a href=&quot;http://unirest.io/&quot;&gt;Unirest&lt;/a&gt; nei nostri esempi, ma &lt;strong&gt;potete usare liberamente qualsiasi framework o libreria in grado di fare request POST via HTTP&lt;/strong&gt;&lt;/li&gt;
@@ -191,7 +154,7 @@ Sono richiesti solo tre campi dati, di cui l’ultimo opzionale:&lt;/p&gt;
   &lt;span class=&quot;s1&quot;&gt;'{ &quot;email&quot; : &quot;your-customer-email@mailprovider.com&quot;, &quot;country&quot;:&quot;it&quot;, &quot;first_name&quot;:&quot;customer-name&quot;, &quot;zip_code&quot;:&quot;00001&quot; }'&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Qualche nota:&lt;/p&gt;
+&lt;h4 id=&quot;qualche-nota&quot;&gt;Qualche nota&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Qui usiamo la libreria &lt;a href=&quot;http://unirest.io/&quot;&gt;Unirest&lt;/a&gt; nei nostri esempi, ma &lt;strong&gt;potete usare liberamente qualsiasi framework o libreria in grado di fare request POST via HTTP&lt;/strong&gt;&lt;/li&gt;
@@ -209,7 +172,7 @@ Sono richiesti solo tre campi dati, di cui l’ultimo opzionale:&lt;/p&gt;
     &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Qualche nota:&lt;/p&gt;
+&lt;h4 id=&quot;qualche-nota&quot;&gt;Qualche nota&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Qui usiamo la libreria &lt;a href=&quot;http://unirest.io/&quot;&gt;Unirest&lt;/a&gt; nei nostri esempi, ma &lt;strong&gt;potete usare liberamente qualsiasi framework o libreria in grado di fare request POST via HTTP&lt;/strong&gt;&lt;/li&gt;
@@ -225,7 +188,7 @@ Sono richiesti solo tre campi dati, di cui l’ultimo opzionale:&lt;/p&gt;
   &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{ \&quot;email\&quot; : \&quot;your-customer-email@mailprovider.com\&quot;, \&quot;country\&quot;:\&quot;it\&quot;, \&quot;first_name\&quot;:\&quot;customer-name\&quot;, \&quot;zip_code\&quot;:\&quot;00001\&quot; }&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;asJson&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Qualche nota:&lt;/p&gt;
+&lt;h4 id=&quot;qualche-nota&quot;&gt;Qualche nota&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Qui usiamo la libreria &lt;a href=&quot;http://unirest.io/&quot;&gt;Unirest&lt;/a&gt; nei nostri esempi, ma &lt;strong&gt;potete usare liberamente qualsiasi framework o libreria in grado di fare request POST via HTTP&lt;/strong&gt;&lt;/li&gt;
@@ -239,7 +202,7 @@ Sono richiesti solo tre campi dati, di cui l’ultimo opzionale:&lt;/p&gt;
   -d &lt;span class=&quot;s1&quot;&gt;'{ &quot;email&quot; : &quot;your-customer-email@mailprovider.com&quot;, &quot;country&quot;:&quot;it&quot;, &quot;first_name&quot;:&quot;customer-name&quot;, &quot;zip_code&quot;: &quot;00001&quot; }'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
   &lt;span class=&quot;s1&quot;&gt;'https://www.transactionale.com/api/v1/transaction'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Qualche nota:&lt;/p&gt;
+&lt;h4 id=&quot;qualche-nota&quot;&gt;Qualche nota&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Qui usiamo la libreria &lt;a href=&quot;http://unirest.io/&quot;&gt;Unirest&lt;/a&gt; nei nostri esempi, ma &lt;strong&gt;potete usare liberamente qualsiasi framework o libreria in grado di fare request POST via HTTP&lt;/strong&gt;&lt;/li&gt;

@@ -100,44 +100,7 @@
             </aside>
             <section class="main col-md-9">
                 <h2>Integrazione del touchpoint mail (server-side)</h2>
-                <p>Se abilitata, Transactionale manda un’email ai tuoi client a nome tuo per ogni transazione che essi fanno sul tuo sito. Per permettere questa operazione, bisogna chiamare la nostra API REST dopo ogni ordine che ricevi. Le chiamate all’API devono essere autenticate con la chiave API (API key) che troverai nella sezione “Integrazione” del tuo Account. 
-Sono richiesti solo tre campi dati, di cui l’ultimo opzionale:</p>
-
-<ul>
-  <li>Country (Stato): il codice nazionale ISO di due lettere (<code class="highlighter-rouge">IT</code>, <code class="highlighter-rouge">DE</code> …) per la nazione sulla quale è stato piazzato l’ordine</li>
-  <li>Email: l’indirizzo email del cliente</li>
-  <li>First name (Nome): il nome proprio del cliente, in modo da potergli mandare una mail personalizzata</li>
-  <li>Zip code (CAP): se verrà fornito un codice CAP del cliente (Zip Code fuori dall’Italia), verranno fornite con priorità più alta le campagne geolocalizzate, in modo che siano più efficaci</li>
-</ul>
-
-<p>La chiamata API è molto semplice. Di seguito troverete esempi nei linguaggi di programmazione più comuni.</p>
-
-<blockquote>
-  <p>NOTA: è possibile integrare questa chiamata lato client, ma suggeriamo di implementarla lato server per motivi di sicurezza, perché coinvolge informazioni sensibili. Siete tuttavia liberi di optare per la strategia che riterrete opportuna.</p>
-</blockquote>
-
-<h3 id="esempi-di-integrazione">Esempi di integrazione</h3>
-
-<p>Abbiamo un po’ di esempi nei linguaggi server-side più comuni:</p>
-
-<ul>
-  <li><a href="./integrations/php">Esempio di integrazione in PHP</a></li>
-  <li><a href="./integrations/ruby">Esempio di integrazione in Ruby</a></li>
-  <li><a href="./integrations/python">Esempio di integrazione in Python</a></li>
-  <li><a href="./integrations/nodejs">Esempio di integrazione in NodeJS</a></li>
-  <li><a href="./integrations/csharp">Esempio di integrazione in C#</a></li>
-  <li><a href="./integrations/curl">Esempio di integrazione in cURL</a></li>
-</ul>
-
-<p>Qualche nota:</p>
-
-<ul>
-  <li>Qui usiamo la libreria <a href="http://unirest.io/">Unirest</a> nei nostri esempi, ma <strong>potete usare liberamente qualsiasi framework o libreria in grado di fare request POST via HTTP</strong></li>
-  <li><strong>Quando copiate l’esempio ricordatevi di personalizzare le variabili usate negli esempi - lo snippet di codice non funzinerà se lasciato come nell’esempio</strong></li>
-  <li>Avete una API key personale nella sezione “Integrazione” del vostro account. Copiate questa chiave e sostituitela nel codice al posto della stringa <code class="highlighter-rouge">YOUR_API_KEY</code></li>
-  <li>Il content type della request HTTP deve essere <code class="highlighter-rouge">application/json</code> <em>(nell’esempio questo header viene già impostato)</em></li>
-  <li>Il body della request HTTP request deve contenere <strong>i dati d’interesse codificati come JSON</strong> <em>(l’esempio mostra come)</em></li>
-</ul>
+                
 
             </section>
         </div>
