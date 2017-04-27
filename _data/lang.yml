@@ -21,10 +21,10 @@ menu:
 #    - link: web-touchpoints
 #      en: Web touchpoints
 #      it: Web touchpoints
-    - link: mail-touchpoints
-      en: Mail touchpoints
-      it: Mail touchpoints
-      sublinks:
+#    - link: mail-touchpoints
+#      en: Mail touchpoints
+#      it: Mail touchpoints
+#      sublinks:
 #        - link: integrations/curl
 #          en: cURL integration
 #          it: Integrazione cURL
