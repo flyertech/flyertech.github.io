@@ -149,6 +149,17 @@ section.main blockquote {
     background-color: $bgBlockquoteColor;
 }
 
+table {
+    font-size: 14px;
+    th {
+        background-color: #ddd;
+    }
+    td, th {
+        border: 1px solid #ddd;
+        padding: 3px 5px;
+    }
+}
+
 ul.trnav {
    margin: 0;
    padding: 0;

@@ -105,17 +105,22 @@
 
 <h3 id="come-funziona">Come funziona</h3>
 
-<p>Per farlo, devi <strong>mandare a Mario una email transazionale con le offerte</strong>, immediatamente dopo che egli ordina (in realtà, è il tuo e-shop che per mezzo delle integrazioni software <strong>ci notifica</strong> dell’avvenuto ordine, e noi mandiamo a Mario l’e-mail transazionale come se partisse da te).</p>
+<ol>
+  <li>Mario ordina sul tuo shop</li>
+  <li>Ogni volta che egli <strong>finalizza un ordine</strong> (cosa che in genere accade sulla <strong>pagina di conferma dell’ordine</strong>), il tuo shop <strong>ci notifica</strong> dell’avvenuto ordine tramite una <strong>chiamata al nostro server</strong></li>
+  <li>Non appena riceviamo la chiamata, Transactionale manderà a Mario una <strong>mail transazionale</strong> con le offerte</li>
+  <li>Se Mario clicca su una delle offerte, verrà generata una <strong>lead</strong></li>
+</ol>
 
 <blockquote>
   <p>Se il tuo shop è basato su <strong>WooCommerce</strong>, <strong>PrestaShop</strong> o <strong>Magento</strong> possiamo fornirti plug-in di integrazione già pronti, che potrai installare senza sforzo e che potranno essere completamente configurati dal tuo backend, senza praticamente nessun intervento tecnico.</p>
 </blockquote>
 
-<p>Per tutti gli altri scenari, puoi rendere possibile l’invio dell’email transazionale col nostro semplice <strong>snippet di integrazione</strong>, come spiegato dopo.</p>
+<p>Per tutti gli altri scenari, puoi rendere possibile l’invio dell’email transazionale col nostro semplice <strong>snippet di integrazione manuale</strong>, come spiegato dopo.</p>
 
 <h3 id="cosa-devo-fare-dettagli-tecnici">Cosa devo fare (dettagli tecnici)</h3>
 
-<p><strong>Ogni volta che un cliente finalizza un ordine</strong> - cosa che in genere succede sulla <strong>pagina di conferma ordine</strong> - il tuo sistema <strong>deve comunicarne alcuni dettagli al nostro</strong> con una <strong>chiamata al nostro servizio API</strong>.</p>
+<p>Il tuo shop deve inviare una chiamata non appena viene finalizzato un ordine.</p>
 
 <blockquote>
   <p>Questa comunicazione <strong>non dovrebbe essere ritardata</strong>. Abbiamo ampia evidenza che la probabilità che il cliente apra la mail transazionale è molto più alta se tale mail è ricevuta insieme alla mail di conferma dell’ordine.</p>
@@ -129,24 +134,73 @@
 
 <h4 id="quali-dati-vengono-inviati">Quali dati vengono inviati</h4>
 
-<p>Sono richiesti solo tre campi dati, di cui l’ultimo opzionale:</p>
+<p>Ecco i campi inviabili per ogni notifica di transazione:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome campo</th>
+      <th>Dato</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">country</code></td>
+      <td><strong>Stato</strong></td>
+      <td><em>(stringa)</em> La nazione del cliente in formato stringa ISO da 2 lettere (<code class="highlighter-rouge">"IT"</code>, <code class="highlighter-rouge">"DE"</code>, …)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">email</code></td>
+      <td><strong>E-mail</strong></td>
+      <td><em>(stringa)</em> L’email del cliente</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">zip_code</code></td>
+      <td><strong>CAP</strong></td>
+      <td><em>(stringa)</em> Il codice CAP (o equivalente estero); geolocalizzando l’offerta la si rende più efficace</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">transaction_value</code></td>
+      <td><strong>Valore transato</strong></td>
+      <td><em>(numero, opzionale)</em> L’ammontare dell’ordine, senza valuta</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">transaction_currency</code></td>
+      <td><strong>Valuta transata</strong></td>
+      <td><em>(stringa, opzionale)</em> Codice ISO a 3 lettere della valuta dell’ordine (<code class="highlighter-rouge">"EUR"</code>, <code class="highlighter-rouge">"GPB"</code>, …)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">national_identification_number</code></td>
+      <td><strong>Codice fiscale</strong></td>
+      <td><em>(stringa, opzionale)</em> Codice Fiscale o l’equivalente estero</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">birth_year</code></td>
+      <td><strong>Anno di nascita</strong></td>
+      <td><em>(stringa, opzionale)</em> Anno di nascita a 4 cifre (es. <code class="highlighter-rouge">"1976"</code>). Può essere anche dedotto automaticamente dal codice fiscale, se presente</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">gender</code></td>
+      <td><strong>Sesso</strong></td>
+      <td><em>(stringa, opzionale)</em> <code class="highlighter-rouge">M</code> o <code class="highlighter-rouge">F</code>; può essere anche dedotto dal codice fiscale, se presente</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">phone</code></td>
+      <td><strong>Telefono</strong></td>
+      <td><em>(stringa, opzionale)</em> Telefono</td>
+    </tr>
+  </tbody>
+</table>
 
 <ul>
-  <li><strong>Country</strong> (Stato): il codice nazionale ISO di due lettere (<code class="highlighter-rouge">IT</code>, <code class="highlighter-rouge">DE</code> …) per la nazione sulla quale è stato piazzato l’ordine</li>
-  <li><strong>Email</strong>: l’indirizzo email del cliente</li>
-  <li><strong>First name (Nome)</strong>: il nome proprio del cliente, in modo da potergli mandare una mail personalizzata</li>
-  <li><strong>Zip code (CAP)</strong>: se verrà fornito un codice CAP del cliente (<em>Zip Code</em> fuori dall’Italia), verranno fornite con priorità più alta le campagne geolocalizzate, in modo che siano più efficaci</li>
+  <li>Se <strong>integrate manualmente</strong>, i dati vanno codificati in formato <strong>JSON</strong> (es.: <code class="highlighter-rouge">"{"country":"IT","email":"john@example.com","zip_code":"12345","birth_year":"1976"}"</code>) e inviati con le specifiche sottoelencate.</li>
+  <li>Se usate <strong>uno dei plugin ready-made</strong> per <strong>Prestashop</strong>, <strong>WooCommerce</strong> o <strong>Magento</strong> non dovrete preoccuparvi: tutta la codifica e l’invio dei dati avverrà in modo automatico.</li>
 </ul>
 
 <h4 id="esempi-di-integrazione">Esempi di integrazione</h4>
 
 <p>La chiamata API è molto semplice. Di seguito troverete esempi nei linguaggi di programmazione più comuni.</p>
-
-<blockquote>
-  <p>NOTA: è possibile integrare questa chiamata lato client, ma suggeriamo di implementarla lato server per motivi di sicurezza, perché coinvolge informazioni sensibili. Siete tuttavia liberi di optare per la strategia che riterrete opportuna.</p>
-</blockquote>
-
-<p>Abbiamo un po’ di esempi nei linguaggi server-side più comuni:</p>
 
 <ul>
   <li><a href="./integrations/php">Esempio di integrazione in PHP</a></li>
@@ -157,14 +211,18 @@
   <li><a href="./integrations/curl">Esempio di integrazione in cURL</a></li>
 </ul>
 
+<blockquote>
+  <p>NOTA: è possibile integrare questa chiamata anche lato client, ma suggeriamo di implementarla lato server per motivi di sicurezza, perché coinvolge informazioni sensibili. Siete tuttavia liberi di optare per la strategia che riterrete opportuna.</p>
+</blockquote>
+
 <h4 id="qualche-nota">Qualche nota</h4>
 
 <ul>
   <li>Qui usiamo la libreria <a href="http://unirest.io/">Unirest</a> nei nostri esempi, ma <strong>potete usare liberamente qualsiasi framework o libreria in grado di fare request POST via HTTP</strong></li>
-  <li><strong>Quando copiate l’esempio ricordatevi di personalizzare le variabili usate negli esempi - lo snippet di codice non funzinerà se lasciato come nell’esempio</strong></li>
-  <li>Avete una API key personale nella sezione “Integrazione” del vostro account. Copiate questa chiave e sostituitela nel codice al posto della stringa <code class="highlighter-rouge">YOUR_API_KEY</code></li>
-  <li>Il content type della request HTTP deve essere <code class="highlighter-rouge">application/json</code> <em>(nell’esempio questo header viene già impostato)</em></li>
-  <li>Il body della request HTTP request deve contenere <strong>i dati d’interesse codificati come JSON</strong> <em>(l’esempio mostra come)</em></li>
+  <li><strong>Se ricopiate un esempio ricordatevi di personalizzare le variabili usate negli esempi - lo snippet di codice non funzionerà se lasciato così com’è</strong></li>
+  <li>Avete una <strong>chiave API personale</strong> <em>(API key)</em> nella sezione “Integrazione” del vostro account. Copiate questa chiave e sostituitela nel codice al posto della stringa <code class="highlighter-rouge">YOUR_API_KEY</code></li>
+  <li>Il content type della request HTTP deve essere <code class="highlighter-rouge">application/json</code></li>
+  <li>Il body della request HTTP request deve contenere <strong>i dati d’interesse codificati come JSON</strong></li>
 </ul>
 
             </section>

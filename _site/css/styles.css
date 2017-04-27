@@ -201,6 +201,14 @@ section.main blockquote {
   border: none;
   background-color: #e0ebeb; }
 
+table {
+  font-size: 14px; }
+  table th {
+    background-color: #ddd; }
+  table td, table th {
+    border: 1px solid #ddd;
+    padding: 3px 5px; }
+
 ul.trnav {
   margin: 0;
   padding: 0; }
