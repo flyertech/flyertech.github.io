@@ -5,7 +5,7 @@ permalink: it/conversions-tracking
 ---
 ### Cos'è il tracciamento delle conversioni
 
-Dopo aver ricevuto una **email transazionale**, il cliente atterra sul tuo sito. Se lui/lei sceglie di reclamare il tuo coupon (o offerta), il **lead** diventa una **conversione diretta**.
+Dopo aver ricevuto una **email transazionale**, il cliente atterra sul tuo sito. Se lui/lei sceglie di reclamare il tuo coupon (o offerta) e **concludere l'ordine** sul tuo shop, il **lead** diventa una **conversione diretta**.
 
 Possiamo tracciare queste conversioni se avvengono entro 28 giorni dal primo accesso dell'utente al tuo sito.
 
