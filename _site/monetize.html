@@ -94,18 +94,23 @@
                 <h2>Monetize</h2>
                 <h3 id="how-do-i-gain-revenues-from-the-network">How do I gain revenues from the network</h3>
 
-<p>When Bob, one of your customers, <strong>finalizes an order on your e-shop</strong>, you send him offers from other companies in our network, gaining two benefits:</p>
+<p>When Bob, one of your customers, <strong>finalizes an order on your e-shop</strong>, Transactionale will send him non-competing and complementary offers from other companies in our network, gaining two benefits:</p>
 
 <ol>
   <li>you <strong>make Bob’s buying experience more pleasant</strong> with interesting offers (coupons, discounts) on other shops</li>
-  <li>every time a <strong>lead</strong> is generated (i.e. Bob clicks on the ad and lands on the advertising site for the first time) you <strong>gain money</strong></li>
+  <li>every time an offer generates a <strong>lead</strong> (i.e. Bob clicks on the ad and lands on the advertising site for the first time) you <strong>gain money</strong></li>
 </ol>
 
-<p>In addition, if you are also an <a href="/engage"><strong>advertiser</strong></a>, you can reinvest this money (if you want) for your very own lead generation program, thus practically auto-financing it.</p>
+<p>In addition, if you are also an <a href="/engage"><strong>advertiser</strong></a>, you can reinvest this money for your very own lead generation program, thus reducing the acquisition costs.</p>
 
 <h3 id="how-does-it-technically-work">How does it technically work</h3>
 
-<p>In order to do that, you must <strong>send Bob a transactional email with the offers</strong> immediately after he orders (actually, your e-shop <strong>notifies us</strong> of the order and we send Bob the e-mail posing as you).</p>
+<ol>
+  <li>Bob orders on your shop</li>
+  <li>Everytime he <strong>finalizes an order</strong> (which happens usually on the <strong>order confirmation page</strong>), you shop will <strong>notify us</strong> of the order completion with a <strong>call to our server</strong></li>
+  <li>As soon as we receive this call, Transactionale whill ship a <strong>transactional e-mail</strong> with the offers</li>
+  <li>If Bob clicks on one of these offers, a <strong>lead</strong> is generated</li>
+</ol>
 
 <blockquote>
   <p>If your shop is based on <strong>WooCommerce</strong>, <strong>PrestaShop</strong> or <strong>Magento</strong> we can provide ready-made integration plugins that will install with no effort and can be fully configured on your backend with virtually no technical involvement.</p>
@@ -115,8 +120,7 @@
 
 <h3 id="what-do-i-need-to-do-technical-details">What do I need to do (technical details)</h3>
 
-<p>You must ensure that <strong>everytime an user finalizes an order</strong> - it usually happens on the <strong>order confirmation page</strong> - your system communicates the details with ours.
-This happens by integrating an <strong>call to our API service</strong>.</p>
+<p>Your shop must make us a call as soon as the order is confirmed.</p>
 
 <blockquote>
   <p>This communication <strong>should not be delayed</strong>. We have ample evidence that the customer is much more likely to open the transactional email if he/she receives it with the order confirmation mail</p>
@@ -124,7 +128,90 @@ This happens by integrating an <strong>call to our API service</strong>.</p>
   <p>If you delay the API call for some reason (f. ex. to do it in bulk calls at a certain point of the night), the open rate decreases dramatically, thus hindering any effectiveness of the network. The ideal scenario is that the user receives the transactional email <em>right after</em> the <strong>order confirmation email</strong>.</p>
 </blockquote>
 
-<p>The integration details <strong>heavily depend upon your CMS/implementation and your server’s language</strong>. <a href="/mail-touchpoints">Click here for all the technical details and instruction.</a></p>
+<p>The integration details <strong>heavily depend upon your CMS/implementation and your server’s language</strong>.</p>
+
+<h4 id="which-data-is-sent">Which data is sent</h4>
+
+<p>Here are the sendable data for every transaction notification:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">country</code></td>
+      <td><em>(string)</em> The ISO 2-letter code of customer’s country (<code class="highlighter-rouge">"IT"</code>, <code class="highlighter-rouge">"DE"</code>, …)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">email</code></td>
+      <td><em>(string)</em> The customer’s e-mail</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">zip_code</code></td>
+      <td><em>(string)</em> ZIP code (or national equivalents); geolocalized offers are more effective</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">transaction_value</code></td>
+      <td><em>(number, optional)</em> Value of the transaction, without currency</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">transaction_currency</code></td>
+      <td><em>(string, optional)</em> Three-letter ISO code of the currency (<code class="highlighter-rouge">"EUR"</code>, <code class="highlighter-rouge">"GPB"</code>, …)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">national_identification_number</code></td>
+      <td><em>(string, optional)</em> Personal nationwide identification code (like SSN, NIN in UK, <em>codice fiscale</em> in Italy…)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">birth_year</code></td>
+      <td><em>(string, optional)</em> 4-digit birth year (es. <code class="highlighter-rouge">"1976"</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">gender</code></td>
+      <td><em>(string, optional)</em> <code class="highlighter-rouge">M</code> or <code class="highlighter-rouge">F</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">phone</code></td>
+      <td><em>(string, optional)</em> Phone number</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>If you <strong>integrate manually</strong>, the data must be encoded in <strong>JSON</strong> format (es.: <code class="highlighter-rouge">"{"country":"IT","email":"john@example.com","zip_code":"12345","birth_year":"1976"}"</code>) and sent with the specifications described below</li>
+  <li>If you use <strong>one of the ready-made plugins</strong> for <strong>Prestashop</strong>, <strong>WooCommerce</strong> or <strong>Magento</strong> all the codification and sending duties will be automatically performed.</li>
+</ul>
+
+<h4 id="integration-examples">Integration examples</h4>
+
+<p>The API call is very simple. Here you will find some examples with the most commond server-side programming languages:</p>
+
+<ul>
+  <li><a href="./integrations/php"> PHP</a></li>
+  <li><a href="./integrations/ruby"> Ruby</a></li>
+  <li><a href="./integrations/python"> Python</a></li>
+  <li><a href="./integrations/nodejs"> NodeJS</a></li>
+  <li><a href="./integrations/csharp"> C#</a></li>
+  <li><a href="./integrations/curl"> cURL</a></li>
+</ul>
+
+<blockquote>
+  <p>NOTE: you could also integrate this call client-side, but we strongly suggest server-side implementation for security reasons, because it could involve sensitive data. Anyway you are free to opt for the strategy you deem adequate.</p>
+</blockquote>
+
+<p>Some notes:</p>
+
+<ul>
+  <li>We use <a href="http://unirest.io/">Unirest</a> in our examples, but feel free to use <strong>any framework or library capable of making HTTP POST requests</strong></li>
+  <li><strong>Remember to customise the variables in the examples - the snippet will not work as-is</strong></li>
+  <li>You have a personal API key in the Integrate section of your account. Copy that key and subsitute it in the snippet where <code class="highlighter-rouge">YOUR_API_KEY</code> is noted</li>
+  <li>The HTTP request’s content type must be <code class="highlighter-rouge">application/json</code> <em>(the example should already take care of this)</em></li>
+  <li>The body of the HTTP request must contain <strong>a JSON-encoded object with your data</strong> <em>(the example should already take care of this)</em></li>
+</ul>
 
             </section>
         </div>

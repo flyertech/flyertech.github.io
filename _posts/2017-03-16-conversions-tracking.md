@@ -5,7 +5,7 @@ permalink: conversions-tracking
 ---
 ### What is conversion tracking
 
-After receiving a **transactional email**, the customer lands on your site. If he/she chooses to redeem your coupon/offer, the **lead** becomes a **direct conversion**.
+After receiving a **transactional email**, the customer lands on your site. If he/she chooses to redeem your coupon/offer and **finalize the order** on your shop, the **lead** becomes a **direct conversion**.
 
 We can track those conversions for you if they happen within 28 days from the user's first access to your site.
 

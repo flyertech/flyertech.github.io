@@ -7,7 +7,7 @@ permalink: it/conversions-tracking
 
 Dopo aver ricevuto una **email transazionale**, il cliente atterra sul tuo sito. Se lui/lei sceglie di reclamare il tuo coupon (o offerta) e **concludere l'ordine** sul tuo shop, il **lead** diventa una **conversione diretta**.
 
-Possiamo tracciare queste conversioni se avvengono entro 28 giorni dal primo accesso dell'utente al tuo sito.
+Possiamo tracciare queste conversioni per te se avvengono entro 28 giorni dal primo accesso dell'utente al tuo sito.
 
 ### Come funziona
 
@@ -39,7 +39,7 @@ L'`<id_ordine>` è una stringa ed è opzionale.
 
 ### Ok, allora devo semplicemente copiare questo testo sul mio sito?
 
-> **No. Ricorda che devi adattare questo codice al tuo ambiente.** Questo significa che, ad esempio, `<ammontare>` è solo un segnaposto d'esempio che rappresenta una variabile JavaScript, che deve essere generata/passata dal tuo server con una sintassi corretta (incluse le virgolette se si tratta di una stringa).
+> **No. Ricorda che devi adattare questo codice al tuo specifico ambiente.** Questo significa che, ad esempio, `<ammontare>` è solo un segnaposto d'esempio che rappresenta una variabile JavaScript, che deve essere generata/passata dal tuo server con una sintassi corretta (incluse le virgolette se si tratta di una stringa).
 
 Come esempio, se il tuo sito è scritto in PHP, devi passare le variabili necessarie dal tuo sito/CMS, usando le funzioni che il tuo sito ha nativamente per prelevare i dati corretti e inserirli nel JavaScript:
 
