@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link href="/css/styles.css" rel="stylesheet">
 <script src="https://use.fontawesome.com/6e348fdec8.js"></script>
-<title>Doppio opt-in</title>
+<title>Webhook / lead tracking</title>
 </head>
 
 <body>
@@ -31,17 +31,17 @@
         <div class="row">
             <aside class="col-md-3">
                 <p>
-                    Lingua:
+                    Language:
                 </p>
                 <ul class="nav nav-pills">
-                    <li>
-                        <a href="/double-opt-in">EN</a>
-                    </li>
                     <li class="active" >
-                        <a href="/it/double-opt-in">IT</a>
+                        <a href="/webhook">EN</a>
+                    </li>
+                    <li>
+                        <a href="/it/webhook">IT</a>
                     </li>
                     <!--li>
-                        <a href="/de/double-opt-in">DE</a>
+                        <a href="/de/webhook">DE</a>
                     </li-->
                 </ul>
                 <br>
@@ -50,7 +50,7 @@
                     
                     <li >
                         
-                        <a href="/it/">Home</a>
+                        <a href="/">Home</a>
 
                         
                     </li>
@@ -58,19 +58,19 @@
                     
                     <li >
                         
-                        <a href="/it/engage">Acquisisci</a>
+                        <a href="/engage">Engage</a>
 
                         
                         <ul>
                         
                         
                         <li  >
-                            <a href="/it/conversions-tracking">Tracciamento conversioni</a>
+                            <a href="/conversions-tracking">Conversion tracking</a>
                         </li>
                         
                         
-                        <li  >
-                            <a href="/it/webhook">Webhook</a>
+                        <li  class="active">
+                            <a href="/webhook">Webhook</a>
                         </li>
                         
                         </ul>
@@ -80,7 +80,7 @@
                     
                     <li >
                         
-                        <a href="/it/monetize">Monetizza</a>
+                        <a href="/monetize">Monetize</a>
 
                         
                     </li>
@@ -88,7 +88,7 @@
                     
                     <li >
                         
-                        <a href="/it/glossary">Glossario</a>
+                        <a href="/glossary">Glossary</a>
 
                         
                     </li>
@@ -96,8 +96,55 @@
                 </ul>
             </aside>
             <section class="main col-md-9">
-                <h2>Doppio opt-in</h2>
-                
+                <h2>Webhook / lead tracking</h2>
+                <h3 id="what-it-is">What it is</h3>
+
+<p>This feature is useful to <strong>integrate in your own platform the automatic import of generated leads</strong> and manage subsequent marketing actions.</p>
+
+<p>Leads are notified immedately when generated (when clicking on the offer if implicit opt-in is chosen, or after the privacy policy acceptance in the case of double opt-in)</p>
+
+<h3 id="how-does-it-work">How does it work</h3>
+
+<p>The advertiser can configure an URL(<em>webhook URL</em>) for his/her e-shop; this URL will be notified of the lead’s data to make the desired integrations on the platform (f.ex. insertion in mailing lists/newsletters, sending offer confirmation emails, other offers, etc.)</p>
+
+<blockquote>
+  <p>If you choose to use webhooks, it’s advisable to deactivate the confirmation and remainder emails in the campaign configuration, in order to avoid overlapping of too much communication to the customer.</p>
+</blockquote>
+
+<h3 id="technical-implementation">Technical implementation</h3>
+
+<p>A POST call will be made with <code class="highlighter-rouge">application/x-www-form-urlencoded</code> coding (similar to a common HTML form submission) with the following parameters:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">ad_id</code></td>
+      <td>campaign ID</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">email</code></td>
+      <td>email address</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">coupon_code</code></td>
+      <td><em>(optional)</em> the user’s coupon code, useful in case of multi-coupon campaigns</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">first_name</code></td>
+      <td><em>(optional)</em></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">zip_code</code></td>
+      <td><em>(optional)</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For example:</p>
+
+<p><code class="highlighter-rouge">ad_id=72&amp;email=test%40transactionale.com&amp;coupon_code=TRCOUPON&amp;first_name=Jane&amp;zip_code=12345</code></p>
+
+<p>The response content will not be considered. Any response status code &gt;= 300 will be taken as error, so the system could try to resend the request.</p>
 
             </section>
         </div>

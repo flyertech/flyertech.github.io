@@ -12,6 +12,9 @@ menu:
         - link: conversions-tracking
           en: Conversion tracking
           it: Tracciamento conversioni
+        - link: webhook
+          en: Webhook
+          it: Webhook
 #        - link: double-opt-in
 #          en: Double Opt-in
 #          it: Doppio Opt-in

@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link href="/css/styles.css" rel="stylesheet">
 <script src="https://use.fontawesome.com/6e348fdec8.js"></script>
-<title>Doppio opt-in</title>
+<title>Webhook / lead tracking</title>
 </head>
 
 <body>
@@ -35,13 +35,13 @@
                 </p>
                 <ul class="nav nav-pills">
                     <li>
-                        <a href="/double-opt-in">EN</a>
+                        <a href="/webhook">EN</a>
                     </li>
                     <li class="active" >
-                        <a href="/it/double-opt-in">IT</a>
+                        <a href="/it/webhook">IT</a>
                     </li>
                     <!--li>
-                        <a href="/de/double-opt-in">DE</a>
+                        <a href="/de/webhook">DE</a>
                     </li-->
                 </ul>
                 <br>
@@ -69,7 +69,7 @@
                         </li>
                         
                         
-                        <li  >
+                        <li  class="active">
                             <a href="/it/webhook">Webhook</a>
                         </li>
                         
@@ -96,8 +96,55 @@
                 </ul>
             </aside>
             <section class="main col-md-9">
-                <h2>Doppio opt-in</h2>
-                
+                <h2>Webhook / lead tracking</h2>
+                <h3 id="in-cosa-consiste">In cosa consiste</h3>
+
+<p>Questa feature è utile per <strong>integrare nella propria piattaforma l’importazione automatica dei lead generati</strong> e gestire autonomamente eventuali azioni di marketing.</p>
+
+<p>I lead vengono notificati immediatamente al momento della generazione (al click sull’offerta nel caso di opt-in implicito, dopo accettazione della privacy policy in caso di double opt-in).</p>
+
+<h3 id="come-funziona">Come funziona</h3>
+
+<p>L’advertiser può configurare per il suo e-shop un URL (<em>webhook URL</em>) da chiamare con i dati del lead in modo da effettuare eventuali integrazioni nella loro piattaforma (ad es. inserimento in mailing list/newsletter, invio di conferma dell’offerta, altre offerte, ecc…)</p>
+
+<blockquote>
+  <p>Usando i webhook, è consigliabile disattivare nelle impostazioni della capagna l’invio della mail di conferma e dei reminder da parte di Transactionale, per non sovrapporre troppe comunicazioni.</p>
+</blockquote>
+
+<h3 id="implementazione-tecnica">Implementazione tecnica</h3>
+
+<p>Verrà effettuata una chiamata POST con codifica <code class="highlighter-rouge">application/x-www-form-urlencoded</code> (quindi paragonabile alla submission di un comune <em>form</em>) contenente i seguenti parametri:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">ad_id</code></td>
+      <td>l’id della campagna</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">email</code></td>
+      <td>indirizzo email</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">coupon_code</code></td>
+      <td>il codice coupon ricevuto dall’utente, facoltativo, utile in caso di campagne multi-coupon</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">first_name</code></td>
+      <td>nome dell’utente <em>(facoltativo)</em></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">zip_code</code></td>
+      <td>cap dell’utente <em>(facoltativo)</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ad esempio:</p>
+
+<p><code class="highlighter-rouge">ad_id=72&amp;email=test%40transactionale.com&amp;coupon_code=TRCOUPON&amp;first_name=Marianna&amp;zip_code=12345</code></p>
+
+<p>Il contenuto della risposta non verrà considerato. I codici di risposta &gt;= 300 saranno considerati come errori, quindi il sistema potrebbe ritentare l’invio della richiesta.</p>
 
             </section>
         </div>
