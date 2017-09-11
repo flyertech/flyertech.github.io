@@ -46,6 +46,19 @@ menu:
 #        - link: integrations/nodejs
 #          en: NodeJS integration
 #          it: Integrazione NodeJS
+    - link: plugins
+      en: Plugins Configuration
+      it: Configurazione dei Plugin
+      sublinks: 
+        - link: plugins/magento
+          en: Magento
+          it: Magento
+        - link: plugins/prestashop
+          en: Prestashop
+          it: Prestashop
+        - link: plugins/woocommerce
+          en: WooCommerce
+          it: WooCommerce
     - link: glossary
       en: Glossary
       it: Glossario

@@ -88,6 +88,33 @@
                     
                     <li >
                         
+                        <a href="/plugins">Plugins Configuration</a>
+
+                        
+                        <ul>
+                        
+                        
+                        <li  >
+                            <a href="/plugins/magento">Magento</a>
+                        </li>
+                        
+                        
+                        <li  >
+                            <a href="/plugins/prestashop">Prestashop</a>
+                        </li>
+                        
+                        
+                        <li  >
+                            <a href="/plugins/woocommerce">WooCommerce</a>
+                        </li>
+                        
+                        </ul>
+                        
+                    </li>
+                    
+                    
+                    <li >
+                        
                         <a href="/glossary">Glossary</a>
 
                         
@@ -98,10 +125,14 @@
             <section class="main col-md-9">
                 <h2>cURL example integration </h2>
                 
-<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>curl -XPOST <span class="se">\</span>
-  -H <span class="s1">'X-Authorization: YOUR_API_KEY'</span> <span class="se">\</span>
-  -H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
-  -d <span class="s1">'{ "email" : "your-customer-email@mailprovider.com", "country":"it", "first_name":"customer-name", "zip_code": "00001" }'</span> <span class="se">\</span>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>curl -XPOST <span class="se">\
+</span>
+  -H <span class="s1">'X-Authorization: YOUR_API_KEY'</span> <span class="se">\
+</span>
+  -H <span class="s2">"Content-type: application/json"</span> <span class="se">\
+</span>
+  -d <span class="s1">'{ "email" : "your-customer-email@mailprovider.com", "country":"it", "first_name":"customer-name", "zip_code": "00001" }'</span> <span class="se">\
+</span>
   <span class="s1">'https://www.transactionale.com/api/v1/transaction'</span></code></pre></figure>
 
 <p>Some notes:</p>
