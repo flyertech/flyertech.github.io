@@ -151,29 +151,64 @@ Now go to your Configuration page:</p>
 
 <div class="img-responsive"><img src="http://localhost:4000/assets/img/magento/module_configuration.png" /></div>
 
-<h3 id="configuring-the-extension">Configuring the extension</h3>
+<h4 id="settings-details">Settings details</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><em>Enabled</em></td>
+      <td>set to <em>no</em> to disable the integration. This will disable both advertiser and publisher integration.</td>
+    </tr>
+    <tr>
+      <td><em>Debug</em></td>
+      <td>this is for development. Leave it to <em>No</em>.</td>
+    </tr>
+    <tr>
+      <td><em>API KEY</em></td>
+      <td>this is used to identify your account. <strong>Follow the instructions below to fill it</strong>.</td>
+    </tr>
+    <tr>
+      <td><em>Country code</em></td>
+      <td>the two-letter ISO code for the country in which your shop operates. I.E. <em>IT</em>.</td>
+    </tr>
+    <tr>
+      <td><em>Enable Transactional e-mail</em></td>
+      <td>use the email channel to deliver offers to your user, in sync with your order confirmation emails.</td>
+    </tr>
+    <tr>
+      <td><em>Send customer telephone</em></td>
+      <td>set to <em>Yes</em> if you want to share your customers’ phone number with advertisers.</td>
+    </tr>
+    <tr>
+      <td><em>Send customer Tax/VAT</em></td>
+      <td>set to <em>Yes</em> if you want to share your customer’s VAT ID with advertisers. It is used to work out gender and age, where not explicitly provided.</td>
+    </tr>
+    <tr>
+      <td><em>Send order total</em></td>
+      <td>set to <em>Yes</em> if you want to send the order value, so offers can be targeted by value.</td>
+    </tr>
+    <tr>
+      <td><em>Enable order confirmation web touchpoint</em></td>
+      <td>set to <em>Yes</em> if you want to show offers in your thank-you page. <strong>WARNING</strong>: this requires the feature to be enabled on your Transactionale account.</td>
+    </tr>
+    <tr>
+      <td><em>Order configuration touchpoint text</em></td>
+      <td>if using the web touchpoint described above, you can specify the text to display above the offers.</td>
+    </tr>
+    <tr>
+      <td><em>Available web touchpoints</em></td>
+      <td>if using web touchpoints, you can select here which one to use, among the ones you created on your Transactionale account.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="last-steps">Last steps</h3>
 
 <p>Copy your API Key from your Transactionale account under My Account -&gt; Integration:</p>
 
 <div class="img-responsive"><img src="http://localhost:4000/assets/img/integrate_api_key.png" /></div>
 
 <p>and paste it into the API KEY field of the extension configuration page.</p>
-
-<h3 id="settings-details">Settings details</h3>
-
-<ul>
-  <li><em>Enabled</em>: set to <em>no</em> to disable the integration. This will disable both advertiser and publisher integration.</li>
-  <li><em>Debug</em>: this is for development. Leave it to <em>No</em>.</li>
-  <li><em>API KEY</em>: this is used to identify your account. Follow the instructions above to fill it.</li>
-  <li><em>Country code</em>: the two-letter ISO code for the country in which your shop operates. I.E. <em>IT</em>.</li>
-  <li><em>Enable Transactional e-mail</em>: use the email channel to deliver offers to your user, in sync with your order confirmation emails.</li>
-  <li><em>Send customer telephone</em>: set to <em>Yes</em> if you want to share your customers’ phone number with advertisers.</li>
-  <li><em>Send customer Tax/VAT</em>: set to <em>Yes</em> if you want to share your customer’s VAT ID with advertisers. It is used to work out gender and age, where not explicitly provided.</li>
-  <li><em>Send order total</em>: set to <em>Yes</em> if you want to send the order value, so offers can be targeted by value.</li>
-  <li><em>Enable order confirmation web touchpoint</em>: set to <em>Yes</em> if you want to show offers in your thank-you page. <strong>WARNING</strong>: this requires the feature to be enabled on your Transactionale account.</li>
-  <li><em>Order configuration touchpoint text</em>: if using the web touchpoint described above, you can specify the text to display above the offers.</li>
-  <li><em>Available web touchpoints</em>: if using web touchpoints, you can select here which one to use, among the ones you created on your Transactionale account.</li>
-</ul>
 
 
             </section>

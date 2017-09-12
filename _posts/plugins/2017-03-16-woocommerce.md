@@ -35,7 +35,17 @@ Now the Settings page will be shown:
 
 <div class='img-responsive'><img src="{{ site.url }}/assets/img/woocommerce/module_configuration.png" /></div>
 
-### Configuring the plugin
+#### Settings details
+
+*Transactionale status*|set to *disabled* to disable the integration. This will disable both advertiser and publisher integration.
+*API KEY*|this is used to identify your account. **Follow the instructions below to fill it**.
+*Country code*|the two-letter ISO code for the country in which your shop operates. I.E. *IT*.
+*Pass phone*|set to *Enabled* if you want to share phone numbers with advertisers.
+*Enable Transactional e-mail*|use the email channel to deliver offers to your user, in sync with your order confirmation emails.
+*Web touchpoint snippet*|if you are using web touchpoints, paste the required snippet here.
+*Web touchpoint text*|if using the web touchpoint described above, you can specify the text to display above the offers.
+
+### Last steps
 
 Copy your API Key from your Transactionale account under My Account -> Integration:
 
@@ -43,15 +53,6 @@ Copy your API Key from your Transactionale account under My Account -> Integrati
 
 and paste it into the API KEY field of the plugin configuration page.
 
-### Settings details
-
-  - *Transactionale status*: set to *disabled* to disable the integration. This will disable both advertiser and publisher integration.
-  - *API KEY*: this is used to identify your account. Follow the instructions above to fill it.
-  - *Country code*: the two-letter ISO code for the country in which your shop operates. I.E. *IT*.
-  - *Pass phone*: set to *Enabled* if you want to share phone numbers with advertisers.
-  - *Enable Transactional e-mail*: use the email channel to deliver offers to your user, in sync with your order confirmation emails.
-  - *Web touchpoint snippet*: if you are using web touchpoints, paste the required snippet here.
-  - *Web touchpoint text*: if using the web touchpoint described above, you can specify the text to display above the offers.
 
 
 

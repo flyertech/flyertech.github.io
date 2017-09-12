@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-12T10:15:16+02:00</updated><id>http://localhost:4000/</id><title type="html">Transactionale Docs</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-12T10:22:14+02:00</updated><id>http://localhost:4000/</id><title type="html">Transactionale Docs</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </subtitle><entry xml:lang="en"><title type="html">How to install and configure the WooCommerce plugin</title><link href="http://localhost:4000/plugins/woocommerce" rel="alternate" type="text/html" title="How to install and configure the WooCommerce plugin" /><published>2017-03-16T00:00:00+01:00</published><updated>2017-03-16T00:00:00+01:00</updated><id>http://localhost:4000/plugins/woocommerce</id><content type="html" xml:base="http://localhost:4000/plugins/woocommerce">&lt;h3 id=&quot;obtaining-the-latest-woocommerce-plugin&quot;&gt;Obtaining the latest WooCommerce plugin&lt;/h3&gt;
 
 &lt;p&gt;You can download the latest version from your dashboard by going to My Account -&amp;gt; Integration -&amp;gt; Click on the WooCommerce button.&lt;/p&gt;
@@ -29,25 +29,48 @@
 
 &lt;div class=&quot;img-responsive&quot;&gt;&lt;img src=&quot;http://localhost:4000/assets/img/woocommerce/module_configuration.png&quot; /&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;configuring-the-plugin&quot;&gt;Configuring the plugin&lt;/h3&gt;
+&lt;h4 id=&quot;settings-details&quot;&gt;Settings details&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Transactionale status&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;set to &lt;em&gt;disabled&lt;/em&gt; to disable the integration. This will disable both advertiser and publisher integration.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;API KEY&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;this is used to identify your account. &lt;strong&gt;Follow the instructions below to fill it&lt;/strong&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Country code&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;the two-letter ISO code for the country in which your shop operates. I.E. &lt;em&gt;IT&lt;/em&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Pass phone&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;set to &lt;em&gt;Enabled&lt;/em&gt; if you want to share phone numbers with advertisers.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Enable Transactional e-mail&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;use the email channel to deliver offers to your user, in sync with your order confirmation emails.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Web touchpoint snippet&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;if you are using web touchpoints, paste the required snippet here.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Web touchpoint text&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;if using the web touchpoint described above, you can specify the text to display above the offers.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;last-steps&quot;&gt;Last steps&lt;/h3&gt;
 
 &lt;p&gt;Copy your API Key from your Transactionale account under My Account -&amp;gt; Integration:&lt;/p&gt;
 
 &lt;div class=&quot;img-responsive&quot;&gt;&lt;img src=&quot;http://localhost:4000/assets/img/integrate_api_key.png&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;and paste it into the API KEY field of the plugin configuration page.&lt;/p&gt;
-
-&lt;h3 id=&quot;settings-details&quot;&gt;Settings details&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Transactionale status&lt;/em&gt;: set to &lt;em&gt;disabled&lt;/em&gt; to disable the integration. This will disable both advertiser and publisher integration.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;API KEY&lt;/em&gt;: this is used to identify your account. Follow the instructions above to fill it.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Country code&lt;/em&gt;: the two-letter ISO code for the country in which your shop operates. I.E. &lt;em&gt;IT&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Pass phone&lt;/em&gt;: set to &lt;em&gt;Enabled&lt;/em&gt; if you want to share phone numbers with advertisers.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Enable Transactional e-mail&lt;/em&gt;: use the email channel to deliver offers to your user, in sync with your order confirmation emails.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Web touchpoint snippet&lt;/em&gt;: if you are using web touchpoints, paste the required snippet here.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Web touchpoint text&lt;/em&gt;: if using the web touchpoint described above, you can specify the text to display above the offers.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Obtaining the latest WooCommerce plugin You can download the latest version from your dashboard by going to My Account -&amp;gt; Integration -&amp;gt; Click on the WooCommerce button. Installing the plugin From the WordPress menu, select Plugins -&amp;gt; Add new: Click on the Upload plugin button: A form will appear. Select the zip file to install it: Now activate the plugin: You will see the plugin in the installed plugins list. Click on Settings: Now the Settings page will be shown: Configuring the plugin Copy your API Key from your Transactionale account under My Account -&amp;gt; Integration: and paste it into the API KEY field of the plugin configuration page. Settings details Transactionale status: set to disabled to disable the integration. This will disable both advertiser and publisher integration. API KEY: this is used to identify your account. Follow the instructions above to fill it. Country code: the two-letter ISO code for the country in which your shop operates. I.E. IT. Pass phone: set to Enabled if you want to share phone numbers with advertisers. Enable Transactional e-mail: use the email channel to deliver offers to your user, in sync with your order confirmation emails. Web touchpoint snippet: if you are using web touchpoints, paste the required snippet here. Web touchpoint text: if using the web touchpoint described above, you can specify the text to display above the offers.</summary></entry><entry xml:lang="en"><title type="html">How to install and configure the Prestashop module</title><link href="http://localhost:4000/plugins/prestashop" rel="alternate" type="text/html" title="How to install and configure the Prestashop module" /><published>2017-03-16T00:00:00+01:00</published><updated>2017-03-16T00:00:00+01:00</updated><id>http://localhost:4000/plugins/prestashop</id><content type="html" xml:base="http://localhost:4000/plugins/prestashop">&lt;h3 id=&quot;obtaining-the-latest-prestashop-module&quot;&gt;Obtaining the latest Prestashop module&lt;/h3&gt;
+&lt;p&gt;and paste it into the API KEY field of the plugin configuration page.&lt;/p&gt;</content><author><name></name></author><summary type="html">Obtaining the latest WooCommerce plugin You can download the latest version from your dashboard by going to My Account -&amp;gt; Integration -&amp;gt; Click on the WooCommerce button. Installing the plugin From the WordPress menu, select Plugins -&amp;gt; Add new: Click on the Upload plugin button: A form will appear. Select the zip file to install it: Now activate the plugin: You will see the plugin in the installed plugins list. Click on Settings: Now the Settings page will be shown: Settings details Transactionale status set to disabled to disable the integration. This will disable both advertiser and publisher integration. API KEY this is used to identify your account. Follow the instructions below to fill it. Country code the two-letter ISO code for the country in which your shop operates. I.E. IT. Pass phone set to Enabled if you want to share phone numbers with advertisers. Enable Transactional e-mail use the email channel to deliver offers to your user, in sync with your order confirmation emails. Web touchpoint snippet if you are using web touchpoints, paste the required snippet here. Web touchpoint text if using the web touchpoint described above, you can specify the text to display above the offers. Last steps Copy your API Key from your Transactionale account under My Account -&amp;gt; Integration: and paste it into the API KEY field of the plugin configuration page.</summary></entry><entry xml:lang="en"><title type="html">How to install and configure the Prestashop module</title><link href="http://localhost:4000/plugins/prestashop" rel="alternate" type="text/html" title="How to install and configure the Prestashop module" /><published>2017-03-16T00:00:00+01:00</published><updated>2017-03-16T00:00:00+01:00</updated><id>http://localhost:4000/plugins/prestashop</id><content type="html" xml:base="http://localhost:4000/plugins/prestashop">&lt;h3 id=&quot;obtaining-the-latest-prestashop-module&quot;&gt;Obtaining the latest Prestashop module&lt;/h3&gt;
 
 &lt;p&gt;You can download the latest version from your dashboard by going to My Account -&amp;gt; Integration -&amp;gt; Click on the Prestashop button.&lt;/p&gt;
 
@@ -73,30 +96,68 @@
 
 &lt;div class=&quot;img-responsive&quot;&gt;&lt;img src=&quot;http://localhost:4000/assets/img/prestashop/module_configuration.png&quot; /&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;configuring-the-module&quot;&gt;Configuring the module&lt;/h3&gt;
+&lt;h4 id=&quot;settings-details&quot;&gt;Settings details&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;API KEY&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;this is used to identify your account. &lt;strong&gt;Follow the instructions below to fill it&lt;/strong&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Country code&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;the two-letter ISO code for the country in which your shop operates. I.E. &lt;em&gt;IT&lt;/em&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Status&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;set to &lt;em&gt;Disabled&lt;/em&gt; to disable the integration. This will disable both advertiser and publisher integration.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Enable advertiser integration&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;set to &lt;em&gt;Enabled&lt;/em&gt; to enable the landing pop-up when users click on your advertising campaigns. This is only needed if you enabled it in your campaigns.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Enable publisher integration&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;use the email channel to deliver offers to your user, in sync with your order confirmation emails.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Enable ads in the order confirmation page&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;set to &lt;em&gt;Disabled/Manual&lt;/em&gt; if you do not want to show offers in your thank-you page, or if you want to manually paste the integration snippet. Select the desired web touchpoint otherwise. &lt;strong&gt;WARNING&lt;/strong&gt;: this requires the feature to be enabled on your Transactionale account.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Order confirmation touchpoint text&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;if using the web touchpoint described above, you can specify the text to display above the offers.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Send customer VAT ID&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;set to &lt;em&gt;Enabled&lt;/em&gt; if you want to share your customer’s VAT ID with advertisers. It is used to work out gender and age, where not explicitly provided.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Send gender&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;set to &lt;em&gt;Enabled&lt;/em&gt; if you want enable targeting campaigns by gender.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Send phone&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;set to &lt;em&gt;Enabled&lt;/em&gt; if you want to share your customers’ phone number with advertisers.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Order confirmation page snippet&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;if using web touchpoints manually, paste here the required snippet.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Transactionale Host URL&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;Only for debugging. Leave as is.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;last-steps&quot;&gt;Last steps&lt;/h3&gt;
 
 &lt;p&gt;Copy your API Key from your Transactionale account under My Account -&amp;gt; Integration:&lt;/p&gt;
 
 &lt;div class=&quot;img-responsive&quot;&gt;&lt;img src=&quot;http://localhost:4000/assets/img/integrate_api_key.png&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;and paste it into the API KEY field of the module configuration.&lt;/p&gt;
-
-&lt;h3 id=&quot;settings-details&quot;&gt;Settings details&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;API KEY&lt;/em&gt;: this is used to identify your account. Follow the instructions above to fill it.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Country code&lt;/em&gt;: the two-letter ISO code for the country in which your shop operates. I.E. &lt;em&gt;IT&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Status&lt;/em&gt;: set to &lt;em&gt;Disabled&lt;/em&gt; to disable the integration. This will disable both advertiser and publisher integration.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Enable advertiser integration&lt;/em&gt;: set to &lt;em&gt;Enabled&lt;/em&gt; to enable the landing pop-up when users click on your advertising campaigns. This is only needed if you enabled it in your campaigns.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Enable publisher integration&lt;/em&gt;: use the email channel to deliver offers to your user, in sync with your order confirmation emails.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Enable ads in the order confirmation page&lt;/em&gt;: set to &lt;em&gt;Disabled/Manual&lt;/em&gt; if you do not want to show offers in your thank-you page, or if you want to manually paste the integration snippet. Select the desired web touchpoint otherwise. &lt;strong&gt;WARNING&lt;/strong&gt;: this requires the feature to be enabled on your Transactionale account.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Order confirmation touchpoint text&lt;/em&gt;: if using the web touchpoint described above, you can specify the text to display above the offers.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Send customer VAT ID&lt;/em&gt;: set to &lt;em&gt;Enabled&lt;/em&gt; if you want to share your customer’s VAT ID with advertisers. It is used to work out gender and age, where not explicitly provided.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Send gender&lt;/em&gt;: set to &lt;em&gt;Enabled&lt;/em&gt; if you want enable targeting campaigns by gender.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Send phone&lt;/em&gt;: set to &lt;em&gt;Enabled&lt;/em&gt; if you want to share your customers’ phone number with advertisers.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Order confirmation page snippet&lt;/em&gt;: if using web touchpoints manually, paste here the required snippet.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Transactionale Host URL&lt;/em&gt;: Only for debugging. Leave as is.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Obtaining the latest Prestashop module You can download the latest version from your dashboard by going to My Account -&amp;gt; Integration -&amp;gt; Click on the Prestashop button. Installing the module Go to the Modules page: Click on the Add new module button: A form will appear where you can upload the module’s zip file: After installing the module, you will need to enable it: Now click con the Configuration button to configure the module: Configuring the module Copy your API Key from your Transactionale account under My Account -&amp;gt; Integration: and paste it into the API KEY field of the module configuration. Settings details API KEY: this is used to identify your account. Follow the instructions above to fill it. Country code: the two-letter ISO code for the country in which your shop operates. I.E. IT. Status: set to Disabled to disable the integration. This will disable both advertiser and publisher integration. Enable advertiser integration: set to Enabled to enable the landing pop-up when users click on your advertising campaigns. This is only needed if you enabled it in your campaigns. Enable publisher integration: use the email channel to deliver offers to your user, in sync with your order confirmation emails. Enable ads in the order confirmation page: set to Disabled/Manual if you do not want to show offers in your thank-you page, or if you want to manually paste the integration snippet. Select the desired web touchpoint otherwise. WARNING: this requires the feature to be enabled on your Transactionale account. Order confirmation touchpoint text: if using the web touchpoint described above, you can specify the text to display above the offers. Send customer VAT ID: set to Enabled if you want to share your customer’s VAT ID with advertisers. It is used to work out gender and age, where not explicitly provided. Send gender: set to Enabled if you want enable targeting campaigns by gender. Send phone: set to Enabled if you want to share your customers’ phone number with advertisers. Order confirmation page snippet: if using web touchpoints manually, paste here the required snippet. Transactionale Host URL: Only for debugging. Leave as is.</summary></entry><entry xml:lang="en"><title type="html">How to install and configure the Magento extension</title><link href="http://localhost:4000/plugins/magento" rel="alternate" type="text/html" title="How to install and configure the Magento extension" /><published>2017-03-16T00:00:00+01:00</published><updated>2017-03-16T00:00:00+01:00</updated><id>http://localhost:4000/plugins/magento</id><content type="html" xml:base="http://localhost:4000/plugins/magento">&lt;h3 id=&quot;obtaining-the-latest-magento-extension&quot;&gt;Obtaining the latest Magento extension&lt;/h3&gt;
+&lt;p&gt;and paste it into the API KEY field of the module configuration.&lt;/p&gt;</content><author><name></name></author><summary type="html">Obtaining the latest Prestashop module You can download the latest version from your dashboard by going to My Account -&amp;gt; Integration -&amp;gt; Click on the Prestashop button. Installing the module Go to the Modules page: Click on the Add new module button: A form will appear where you can upload the module’s zip file: After installing the module, you will need to enable it: Now click con the Configuration button to configure the module: Settings details API KEY this is used to identify your account. Follow the instructions below to fill it. Country code the two-letter ISO code for the country in which your shop operates. I.E. IT. Status set to Disabled to disable the integration. This will disable both advertiser and publisher integration. Enable advertiser integration set to Enabled to enable the landing pop-up when users click on your advertising campaigns. This is only needed if you enabled it in your campaigns. Enable publisher integration use the email channel to deliver offers to your user, in sync with your order confirmation emails. Enable ads in the order confirmation page set to Disabled/Manual if you do not want to show offers in your thank-you page, or if you want to manually paste the integration snippet. Select the desired web touchpoint otherwise. WARNING: this requires the feature to be enabled on your Transactionale account. Order confirmation touchpoint text if using the web touchpoint described above, you can specify the text to display above the offers. Send customer VAT ID set to Enabled if you want to share your customer’s VAT ID with advertisers. It is used to work out gender and age, where not explicitly provided. Send gender set to Enabled if you want enable targeting campaigns by gender. Send phone set to Enabled if you want to share your customers’ phone number with advertisers. Order confirmation page snippet if using web touchpoints manually, paste here the required snippet. Transactionale Host URL Only for debugging. Leave as is. Last steps Copy your API Key from your Transactionale account under My Account -&amp;gt; Integration: and paste it into the API KEY field of the module configuration.</summary></entry><entry xml:lang="en"><title type="html">How to install and configure the Magento extension</title><link href="http://localhost:4000/plugins/magento" rel="alternate" type="text/html" title="How to install and configure the Magento extension" /><published>2017-03-16T00:00:00+01:00</published><updated>2017-03-16T00:00:00+01:00</updated><id>http://localhost:4000/plugins/magento</id><content type="html" xml:base="http://localhost:4000/plugins/magento">&lt;h3 id=&quot;obtaining-the-latest-magento-extension&quot;&gt;Obtaining the latest Magento extension&lt;/h3&gt;
 
 &lt;p&gt;You can download the latest version from your dashboard by going to My Account -&amp;gt; Integration -&amp;gt; Click on the Magento button.&lt;/p&gt;
 
@@ -123,29 +184,64 @@ Now go to your Configuration page:&lt;/p&gt;
 
 &lt;div class=&quot;img-responsive&quot;&gt;&lt;img src=&quot;http://localhost:4000/assets/img/magento/module_configuration.png&quot; /&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;configuring-the-extension&quot;&gt;Configuring the extension&lt;/h3&gt;
+&lt;h4 id=&quot;settings-details&quot;&gt;Settings details&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Enabled&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;set to &lt;em&gt;no&lt;/em&gt; to disable the integration. This will disable both advertiser and publisher integration.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Debug&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;this is for development. Leave it to &lt;em&gt;No&lt;/em&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;API KEY&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;this is used to identify your account. &lt;strong&gt;Follow the instructions below to fill it&lt;/strong&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Country code&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;the two-letter ISO code for the country in which your shop operates. I.E. &lt;em&gt;IT&lt;/em&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Enable Transactional e-mail&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;use the email channel to deliver offers to your user, in sync with your order confirmation emails.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Send customer telephone&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;set to &lt;em&gt;Yes&lt;/em&gt; if you want to share your customers’ phone number with advertisers.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Send customer Tax/VAT&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;set to &lt;em&gt;Yes&lt;/em&gt; if you want to share your customer’s VAT ID with advertisers. It is used to work out gender and age, where not explicitly provided.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Send order total&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;set to &lt;em&gt;Yes&lt;/em&gt; if you want to send the order value, so offers can be targeted by value.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Enable order confirmation web touchpoint&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;set to &lt;em&gt;Yes&lt;/em&gt; if you want to show offers in your thank-you page. &lt;strong&gt;WARNING&lt;/strong&gt;: this requires the feature to be enabled on your Transactionale account.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Order configuration touchpoint text&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;if using the web touchpoint described above, you can specify the text to display above the offers.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Available web touchpoints&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;if using web touchpoints, you can select here which one to use, among the ones you created on your Transactionale account.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;last-steps&quot;&gt;Last steps&lt;/h3&gt;
 
 &lt;p&gt;Copy your API Key from your Transactionale account under My Account -&amp;gt; Integration:&lt;/p&gt;
 
 &lt;div class=&quot;img-responsive&quot;&gt;&lt;img src=&quot;http://localhost:4000/assets/img/integrate_api_key.png&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;and paste it into the API KEY field of the extension configuration page.&lt;/p&gt;
-
-&lt;h3 id=&quot;settings-details&quot;&gt;Settings details&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Enabled&lt;/em&gt;: set to &lt;em&gt;no&lt;/em&gt; to disable the integration. This will disable both advertiser and publisher integration.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Debug&lt;/em&gt;: this is for development. Leave it to &lt;em&gt;No&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;API KEY&lt;/em&gt;: this is used to identify your account. Follow the instructions above to fill it.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Country code&lt;/em&gt;: the two-letter ISO code for the country in which your shop operates. I.E. &lt;em&gt;IT&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Enable Transactional e-mail&lt;/em&gt;: use the email channel to deliver offers to your user, in sync with your order confirmation emails.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Send customer telephone&lt;/em&gt;: set to &lt;em&gt;Yes&lt;/em&gt; if you want to share your customers’ phone number with advertisers.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Send customer Tax/VAT&lt;/em&gt;: set to &lt;em&gt;Yes&lt;/em&gt; if you want to share your customer’s VAT ID with advertisers. It is used to work out gender and age, where not explicitly provided.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Send order total&lt;/em&gt;: set to &lt;em&gt;Yes&lt;/em&gt; if you want to send the order value, so offers can be targeted by value.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Enable order confirmation web touchpoint&lt;/em&gt;: set to &lt;em&gt;Yes&lt;/em&gt; if you want to show offers in your thank-you page. &lt;strong&gt;WARNING&lt;/strong&gt;: this requires the feature to be enabled on your Transactionale account.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Order configuration touchpoint text&lt;/em&gt;: if using the web touchpoint described above, you can specify the text to display above the offers.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Available web touchpoints&lt;/em&gt;: if using web touchpoints, you can select here which one to use, among the ones you created on your Transactionale account.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Obtaining the latest Magento extension You can download the latest version from your dashboard by going to My Account -&amp;gt; Integration -&amp;gt; Click on the Magento button. Installing the extension Open Magento Connect: Upload the tgz file from inside Connect Manager: When done, log out and the back into the Magento admin. Now go to your Configuration page: Select the specific store where you are going to activate Transactionale: Now the Transactionale Settings menu entry will be shown. Click it to configure the module: Configuring the extension Copy your API Key from your Transactionale account under My Account -&amp;gt; Integration: and paste it into the API KEY field of the extension configuration page. Settings details Enabled: set to no to disable the integration. This will disable both advertiser and publisher integration. Debug: this is for development. Leave it to No. API KEY: this is used to identify your account. Follow the instructions above to fill it. Country code: the two-letter ISO code for the country in which your shop operates. I.E. IT. Enable Transactional e-mail: use the email channel to deliver offers to your user, in sync with your order confirmation emails. Send customer telephone: set to Yes if you want to share your customers’ phone number with advertisers. Send customer Tax/VAT: set to Yes if you want to share your customer’s VAT ID with advertisers. It is used to work out gender and age, where not explicitly provided. Send order total: set to Yes if you want to send the order value, so offers can be targeted by value. Enable order confirmation web touchpoint: set to Yes if you want to show offers in your thank-you page. WARNING: this requires the feature to be enabled on your Transactionale account. Order configuration touchpoint text: if using the web touchpoint described above, you can specify the text to display above the offers. Available web touchpoints: if using web touchpoints, you can select here which one to use, among the ones you created on your Transactionale account.</summary></entry><entry><title type="html">Web touchpoint integration</title><link href="http://localhost:4000/web-touchpoints" rel="alternate" type="text/html" title="Web touchpoint integration" /><published>2017-03-16T00:00:00+01:00</published><updated>2017-03-16T00:00:00+01:00</updated><id>http://localhost:4000/web-touchpoint</id><content type="html" xml:base="http://localhost:4000/web-touchpoints">&lt;p&gt;If you prefer not to send one more email to your customers, you can use &lt;strong&gt;web touchpoints&lt;/strong&gt;.
+&lt;p&gt;and paste it into the API KEY field of the extension configuration page.&lt;/p&gt;</content><author><name></name></author><summary type="html">Obtaining the latest Magento extension You can download the latest version from your dashboard by going to My Account -&amp;gt; Integration -&amp;gt; Click on the Magento button. Installing the extension Open Magento Connect: Upload the tgz file from inside Connect Manager: When done, log out and the back into the Magento admin. Now go to your Configuration page: Select the specific store where you are going to activate Transactionale: Now the Transactionale Settings menu entry will be shown. Click it to configure the module: Settings details Enabled set to no to disable the integration. This will disable both advertiser and publisher integration. Debug this is for development. Leave it to No. API KEY this is used to identify your account. Follow the instructions below to fill it. Country code the two-letter ISO code for the country in which your shop operates. I.E. IT. Enable Transactional e-mail use the email channel to deliver offers to your user, in sync with your order confirmation emails. Send customer telephone set to Yes if you want to share your customers’ phone number with advertisers. Send customer Tax/VAT set to Yes if you want to share your customer’s VAT ID with advertisers. It is used to work out gender and age, where not explicitly provided. Send order total set to Yes if you want to send the order value, so offers can be targeted by value. Enable order confirmation web touchpoint set to Yes if you want to show offers in your thank-you page. WARNING: this requires the feature to be enabled on your Transactionale account. Order configuration touchpoint text if using the web touchpoint described above, you can specify the text to display above the offers. Available web touchpoints if using web touchpoints, you can select here which one to use, among the ones you created on your Transactionale account. Last steps Copy your API Key from your Transactionale account under My Account -&amp;gt; Integration: and paste it into the API KEY field of the extension configuration page.</summary></entry><entry><title type="html">Web touchpoint integration</title><link href="http://localhost:4000/web-touchpoints" rel="alternate" type="text/html" title="Web touchpoint integration" /><published>2017-03-16T00:00:00+01:00</published><updated>2017-03-16T00:00:00+01:00</updated><id>http://localhost:4000/web-touchpoint</id><content type="html" xml:base="http://localhost:4000/web-touchpoints">&lt;p&gt;If you prefer not to send one more email to your customers, you can use &lt;strong&gt;web touchpoints&lt;/strong&gt;.
 Web touchpoints define areas in your website where we will display ads with the same criteria as our transactional emails, but the email address will only be shared:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;after the user clicks on an advertisement (&lt;strong&gt;implicit opt-in&lt;/strong&gt;)&lt;/li&gt;
