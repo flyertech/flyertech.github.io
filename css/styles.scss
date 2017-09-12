@@ -193,8 +193,10 @@ div.img-responsive {
     box-shadow: 0 10px 45px rgba(0,0,0,.2);
     margin-bottom: 15px;
     border-radius: 3px;
+    text-align: center;
 
     img {
-        width: 100%;
+        max-width: 100%;
+        margin: auto;
     }
 }
