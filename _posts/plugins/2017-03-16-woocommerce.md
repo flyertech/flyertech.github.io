@@ -13,33 +13,33 @@ You can download the latest version from your dashboard by going to My Account -
 
 From the WordPress menu, select Plugins -> Add new:
 
-<img src="{{ site.url }}/assets/img/woocommerce/modules_menu.png" />
+<div class='img-responsive'><img src="{{ site.url }}/assets/img/woocommerce/modules_menu.png" /></div>
 
 Click on the *Upload plugin* button:
 
-<img src="{{ site.url }}/assets/img/woocommerce/module_upload_btn.png" />
+<div class='img-responsive'><img src="{{ site.url }}/assets/img/woocommerce/module_upload_btn.png" /></div>
 
 A form will appear. Select the zip file to install it:
 
-<img src="{{ site.url }}/assets/img/woocommerce/module_upload.png" />
+<div class='img-responsive'><img src="{{ site.url }}/assets/img/woocommerce/module_upload.png" /></div>
 
 Now activate the plugin:
 
-<img src="{{ site.url }}/assets/img/woocommerce/module_activation.png" />
+<div class='img-responsive'><img src="{{ site.url }}/assets/img/woocommerce/module_activation.png" /></div>
 
 You will see the plugin in the installed plugins list. Click on *Settings*:
 
-<img src="{{ site.url }}/assets/img/woocommerce/module_entry.png" />
+<div class='img-responsive'><img src="{{ site.url }}/assets/img/woocommerce/module_entry.png" /></div>
 
 Now the Settings page will be shown:
 
-<img src="{{ site.url }}/assets/img/woocommerce/module_configuration.png" />
+<div class='img-responsive'><img src="{{ site.url }}/assets/img/woocommerce/module_configuration.png" /></div>
 
 ### Configuring the plugin
 
 Copy your API Key from your Transactionale account under My Account -> Integration:
 
-<img src="{{ site.url }}/assets/img/integrate_api_key.png" />
+<div class='img-responsive'><img src="{{ site.url }}/assets/img/integrate_api_key.png" /></div>
 
 and paste it into the API KEY field of the plugin configuration page.
 

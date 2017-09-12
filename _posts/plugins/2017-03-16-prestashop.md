@@ -13,29 +13,29 @@ You can download the latest version from your dashboard by going to My Account -
 
 Go to the Modules page:
 
-<img src="{{ site.url }}/assets/img/prestashop/modules_menu.png" />
+<div class='img-responsive'><img src="{{ site.url }}/assets/img/prestashop/modules_menu.png" /></div>
 
 Click on the *Add new module* button:
 
-<img src="{{ site.url }}/assets/img/prestashop/modules_buttons.png" />
+<div class='img-responsive'><img src="{{ site.url }}/assets/img/prestashop/modules_buttons.png" /></div>
 
 A form will appear where you can upload the module's zip file:
 
-<img src="{{ site.url }}/assets/img/prestashop/module_upload.png" />
+<div class='img-responsive'><img src="{{ site.url }}/assets/img/prestashop/module_upload.png" /></div>
 
 After installing the module, you will need to enable it:
 
-<img src="{{ site.url }}/assets/img/prestashop/module_installed.png" />
+<div class='img-responsive'><img src="{{ site.url }}/assets/img/prestashop/module_installed.png" /></div>
 
 Now click con the *Configuration* button to configure the module:
 
-<img src="{{ site.url }}/assets/img/prestashop/module_configuration.png" />
+<div class='img-responsive'><img src="{{ site.url }}/assets/img/prestashop/module_configuration.png" /></div>
 
 ### Configuring the module
 
 Copy your API Key from your Transactionale account under My Account -> Integration:
 
-<img src="{{ site.url }}/assets/img/integrate_api_key.png" />
+<div class='img-responsive'><img src="{{ site.url }}/assets/img/integrate_api_key.png" /></div>
 
 and paste it into the API KEY field of the module configuration.
 

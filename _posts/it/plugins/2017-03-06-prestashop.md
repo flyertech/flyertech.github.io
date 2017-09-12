@@ -13,31 +13,53 @@ Puoi scaricare la versione più recente dalla tua dashbaord andando su My Accoun
 
 Vai alla sezione *Moduli e Servizi*:
 
-<img src="{{ site.url }}/assets/img/prestashop/modules_menu.png" />
+<div class='img-responsive'>
+  <img src="{{ site.url }}/assets/img/prestashop/modules_menu.png" />
+</div>
 
 Clicca sul pulsante *Aggiungi nuovo modulo*:
 
-<img src="{{ site.url }}/assets/img/prestashop/modules_buttons.png" />
+<div class='img-responsive'>
+  <img src="{{ site.url }}/assets/img/prestashop/modules_buttons.png" />
+</div>
 
 Apparirà un form dove potrai caricare il file zip del modulo:
 
-<img src="{{ site.url }}/assets/img/prestashop/module_upload.png" />
+<div class='img-responsive'>
+  <img src="{{ site.url }}/assets/img/prestashop/module_upload.png" />
+</div>
 
 Dopo averlo installato, lo devi abilitare:
 
-<img src="{{ site.url }}/assets/img/prestashop/module_installed.png" />
+<div class='img-responsive'>
+  <img src="{{ site.url }}/assets/img/prestashop/module_installed.png" />
+</div>
 
 Ora cliccando su *Configura* appariranno le impostazioni del modulo:
 
-<img src="{{ site.url }}/assets/img/prestashop/module_configuration.png" />
+<div class='img-responsive'>
+  <img src="{{ site.url }}/assets/img/prestashop/module_configuration.png" />
+</div>
 
 ### Configurazione del modulo
 
-Copia la tua API KEY dal tuo accout transactionale da My Account -> Integration:
+- Vai sul **sito di Transactionale**, nella pagina **My Account -> Integration**.
 
-<img src="{{ site.url }}/assets/img/integrate_api_key.png" />
+- Copia la tua **API Key** dalla maschera **"Your API Key"**. Invece di selezionare il testo puoi anche semplicemente cliccare sul tasto **Copy**.
 
-e incollala nel campo API KEY delle impostazioni del modulo.
+<div class='img-responsive'>
+  <img src="{{ site.url }}/assets/img/integrate_api_key.png" />
+</div>
+
+- **Torna su Prestashop**
+
+- vai alla **pagina di configurazione del modulo** 
+
+- **incolla l'API Key** che hai copiato prima nell'apposito campo.
+
+<div class='img-responsive'>
+  <img src="{{ site.url }}/assets/img/prestashop/api_key.png" />
+</div>
 
 ### Dettaglio delle impostazioni
 
