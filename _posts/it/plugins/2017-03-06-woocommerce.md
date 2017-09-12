@@ -35,6 +35,19 @@ Apparirà la pagina delle impostazioni:
 
 <div class='img-responsive'><img src="{{ site.url }}/assets/img/woocommerce/module_configuration.png" /></div>
 
+
+#### Dettaglio delle impostazioni
+
+*Transactionale status*|imposta su *disabled* per disattivare l'integrazione. Questo disattiverà sia l'integrazione advertier che publisher.
+*API KEY*|è necessaria per identificare il tuo account. **Segui le istruzioni qui sotto per compilarla.**
+*Country code*|il codice ISO di due lettere della nazione in cui opera il tuo shop. Ad es. *IT*
+*Pass phone*|imposta su *Enabled* per condivider i numeri di telefono con gli advertiser.
+*Enable Transactional e-mail*|usa il canale mail per inviare offerte ai tuoi utenti, sincronizzate con le tue mail di conferma ordine.
+*Web touchpoint snippet*|se usi il web touchpoint, incolla qui lo snippet necessario.
+*Web touchpoint text*|se usi il web touchpoint, puoi specificare qui il testo da mostrare prima delle offerte.
+
+
+
 ### Configurazione del plugin
 
 - Vai sul **sito di Transactionale**, nella pagina **My Account -> Integration**.
@@ -54,16 +67,5 @@ Apparirà la pagina delle impostazioni:
 <div class='img-responsive'>
   <img src="{{ site.url }}/assets/img/woocommerce/api_key.png" />
 </div>
-
-### Dettaglio delle impostazioni
-
-  - *Transactionale status*: imposta su *disabled* per disattivare l'integrazione. Questo disattiverà sia l'integrazione advertier che publisher.
-  - *API KEY*: è necessaria per identificare il tuo account. Segui le istruzioni qui sopra per compilarla.
-  - *Country code*: il codice ISO di due lettere della nazione in cui opera il tuo shop. Ad es. *IT*
-  - *Pass phone*: imposta su *Enabled* per condivider i numeri di telefono con gli advertiser.
-  - *Enable Transactional e-mail*: usa il canale mail per inviare offerte ai tuoi utenti, sincronizzate con le tue mail di conferma ordine.
-  - *Web touchpoint snippet*: se usi il web touchpoint, incolla qui lo snippet necessario.
-  - *Web touchpoint text*: se usi il web touchpoint, puoi specificare qui il testo da mostrare prima delle offerte.
-
 
 

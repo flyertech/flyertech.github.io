@@ -160,7 +160,62 @@
   <img src="http://localhost:4000/assets/img/prestashop/module_configuration.png" />
 </div>
 
-<h3 id="configurazione-del-modulo">Configurazione del modulo</h3>
+<h4 id="dettaglio-delle-impostazioni">Dettaglio delle impostazioni</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><em>API KEY</em></td>
+      <td>necessario per identificare il tuo account. <strong>Segui le istruzioni qui sotto per compilarlo</strong>.</td>
+    </tr>
+    <tr>
+      <td><em>Codice nazione</em></td>
+      <td>il codice ISO a due lettere della nazione in cui opera il tuo shop. AD es. <em>IT</em>.</td>
+    </tr>
+    <tr>
+      <td><em>Stato</em></td>
+      <td>imposta su <em>Disabilitato</em> per disabilitare l’integrazione. Questo disabiliterà sia l’integrazione advertiser che publisher.</td>
+    </tr>
+    <tr>
+      <td><em>Abilita integrazione Advertiser</em></td>
+      <td>imposta su <em>Abilitato</em> per abilitare il popup di atterraggio quando gli utenti cliccano sulle tue campagne di acquisizione. E’ necessario solo se il popup è stato abilitato nelle tue campagne.</td>
+    </tr>
+    <tr>
+      <td><em>Abilita integrazione Publisher</em></td>
+      <td>usa il canale mail per inviare offerte ai tuoi utenti, sincronizzate con le tue mail di conferma ordine.</td>
+    </tr>
+    <tr>
+      <td><em>Abilita annunci in pagina di conferma ordine</em></td>
+      <td>imposta su <em>Disabled/Manual</em> se non vuoi mostrare offerte nella tua thank-you page, oppure se vuoi incollare a mano lo snippet di integrazione. Altrimenti seleziona il touchpoint web desiderato. <strong>ATTENZIONE</strong>: questo richiede che la funzionalità sia abilitata nel tuo account Transactionale.</td>
+    </tr>
+    <tr>
+      <td><em>Testo prima di annunci in pagina di conferma ordine</em></td>
+      <td>se usi il web touchpoint descritto sopra, puoi specificare il testo da mostrare prima delle offerte.</td>
+    </tr>
+    <tr>
+      <td><em>Trasmetti codice fiscale</em></td>
+      <td>imposta su <em>Abilitato</em> se vuoi trasmettere il codice fiscale dei tuoi clienti. Viene impiegato per determinare il sesso e l’età, qualora non esplicitamente compilati.</td>
+    </tr>
+    <tr>
+      <td><em>Trasmetti il sesso</em></td>
+      <td>imposta su <em>Abilitato</em> se vuoi consentire campagne targettizzate per sesso.</td>
+    </tr>
+    <tr>
+      <td><em>Trasmetti numero di telefono</em></td>
+      <td>imposta su <em>Abilitato</em> se vuoi condividere il numero di telefono con gli advertiser.</td>
+    </tr>
+    <tr>
+      <td><em>Snippet per annunci in pagina di conferma ordine</em></td>
+      <td>se si intende usare un web touchpoint manualmente, è possibile incollare qui lo snippet necessario.</td>
+    </tr>
+    <tr>
+      <td><em>Transactionale Host URL</em></td>
+      <td>Solo per debugging. Lasciare invariato.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ultimi-passi">Ultimi passi</h3>
 
 <ul>
   <li>
@@ -190,23 +245,6 @@
 <div class="img-responsive">
   <img src="http://localhost:4000/assets/img/prestashop/api_key.png" />
 </div>
-
-<h3 id="dettaglio-delle-impostazioni">Dettaglio delle impostazioni</h3>
-
-<ul>
-  <li><em>API KEY</em>: necessario per identificare il tuo account. Segui le istruzioni qui sopra per compilarlo.</li>
-  <li><em>Codice nazione</em>: il codice ISO a due lettere della nazione in cui opera il tuo shop. AD es. <em>IT</em>.</li>
-  <li><em>Stato</em>: imposta su <em>Disabilitato</em> per disabilitare l’integrazione. Questo disabiliterà sia l’integrazione advertiser che publisher.</li>
-  <li><em>Abilita integrazione Advertiser</em>: imposta su <em>Abilitato</em> per abilitare il popup di atterraggio quando gli utenti cliccano sulle tue campagne di acquisizione. E’ necessario solo se il popup è stato abilitato nelle tue campagne.</li>
-  <li><em>Abilita integrazione Publisher</em>: usa il canale mail per inviare offerte ai tuoi utenti, sincronizzate con le tue mail di conferma ordine.</li>
-  <li><em>Abilita annunci in pagina di conferma ordine</em>: imposta su <em>Disabled/Manual</em> se non vuoi mostrare offerte nella tua thank-you page, oppure se vuoi incollare a mano lo snippet di integrazione. Altrimenti seleziona il touchpoint web desiderato. <strong>ATTENZIONE</strong>: questo richiede che la funzionalità sia abilitata nel tuo account Transactionale.</li>
-  <li><em>Testo prima di annunci in pagina di conferma ordine</em>: se usi il web touchpoint descritto sopra, puoi specificare il testo da mostrare prima delle offerte.</li>
-  <li><em>Trasmetti codice fiscale</em>: imposta su <em>Abilitato</em> se vuoi trasmettere il codice fiscale dei tuoi clienti. Viene impiegato per determinare il sesso e l’età, qualora non esplicitamente compilati.</li>
-  <li><em>Trasmetti il sesso</em>: imposta su <em>Abilitato</em> se vuoi consentire campagne targettizzate per sesso.</li>
-  <li><em>Trasmetti numero di telefono</em>: imposta su <em>Abilitato</em> se vuoi condividere il numero di telefono con gli advertiser.</li>
-  <li><em>Snippet per annunci in pagina di conferma ordine</em>: se si intende usare un web touchpoint manualmente, è possibile incollare qui lo snippet necessario.</li>
-  <li><em>Transactionale Host URL</em>: Solo per debugging. Lasciare invariato.</li>
-</ul>
 
 
             </section>
