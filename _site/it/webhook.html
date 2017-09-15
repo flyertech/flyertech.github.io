@@ -126,16 +126,36 @@
                 <h2>Webhook / lead tracking</h2>
                 <h3 id="in-cosa-consiste">In cosa consiste</h3>
 
-<p>Questa feature è utile per <strong>integrare nella propria piattaforma l’importazione automatica dei lead generati</strong> e gestire autonomamente eventuali azioni di marketing in parallelo al tracciamento che comunque avviene già su Transactionale.</p>
+<p><strong>Transactionale</strong> gestisce già la generazione dei lead per te, in modo assolutamente autonomo.</p>
 
-<p>I lead vengono notificati immediatamente al momento della generazione (al click sull’offerta nel caso di opt-in implicito, dopo accettazione della privacy policy in caso di double opt-in).</p>
+<p>Ma sei hai altre potenzialità per poterli sfruttare, perché non approfittarne
+con i <strong>webhook</strong> di Transactionale?</p>
+
+<p>Abbiamo creato questa feature per aiutarti ad <strong>integrare nella tua piattaforma un’importazione
+automatica dei lead generati</strong> e gestire autonomamente eventuali azioni di marketing in parallelo
+al nostro tracciamento.</p>
+
+<blockquote>
+  <p>Col webhook, i lead ti vengono notificati direttamente e immediatamente al momento della generazione 
+(al click sull’offerta nel caso di opt-in implicito, dopo accettazione della privacy policy in caso 
+di double opt-in).</p>
+
+  <p>Questo ti permetterà di usare i dati del lead per fini statistici, azioni di remarketing, o qualsiasi
+altro utilizzo tu possa ritenere utile.</p>
+</blockquote>
+
+<h4 id="il-webhook-si-sostituisce-al-tracciamento-di-transactionale">Il webhook si sostituisce al tracciamento di Transactionale?</h4>
+
+<p><strong>No</strong>. Transactionale continuerà comunque a tracciare i tuoi lead in modo autonomo sulla nostra
+piattaforma. Il webhook è solo una notifica parallela che consente di ampliare le possibilità 
+della tua campagna a tuo piacimento.</p>
 
 <h3 id="come-funziona">Come funziona</h3>
 
 <p>L’advertiser può configurare per il suo e-shop un URL (<em>webhook URL</em>) da chiamare con i dati del lead in modo da effettuare eventuali integrazioni nella loro piattaforma (ad es. inserimento in mailing list/newsletter, invio di conferma dell’offerta, altre offerte, ecc…)</p>
 
 <blockquote>
-  <p>Usando i webhook, è consigliabile disattivare nelle impostazioni della capagna l’invio della mail di conferma e dei reminder da parte di Transactionale, per non sovrapporre troppe comunicazioni.</p>
+  <p>Usando i webhook, è consigliabile disattivare nelle impostazioni della campagna l’invio della mail di conferma e dei reminder da parte di Transactionale, per non sovrapporre troppe comunicazioni.</p>
 </blockquote>
 
 <h3 id="implementazione-tecnica">Implementazione tecnica</h3>
@@ -153,16 +173,32 @@
       <td>indirizzo email</td>
     </tr>
     <tr>
+      <td><code class="highlighter-rouge">first_name</code></td>
+      <td>nome dell’utente</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">last_name</code></td>
+      <td>cognome</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">gender</code></td>
+      <td>sesso (“M” o “F”)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">phone</code></td>
+      <td>telefono</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">birth_year</code></td>
+      <td>anno di nascita</td>
+    </tr>
+    <tr>
       <td><code class="highlighter-rouge">coupon_code</code></td>
       <td>il codice coupon ricevuto dall’utente, facoltativo, utile in caso di campagne multi-coupon</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">first_name</code></td>
-      <td>nome dell’utente <em>(facoltativo)</em></td>
-    </tr>
-    <tr>
       <td><code class="highlighter-rouge">zip_code</code></td>
-      <td>cap dell’utente <em>(facoltativo)</em></td>
+      <td>cap dell’utente</td>
     </tr>
   </tbody>
 </table>
@@ -172,6 +208,13 @@
 <p><code class="highlighter-rouge">ad_id=72&amp;email=test%40transactionale.com&amp;coupon_code=TRCOUPON&amp;first_name=Marianna&amp;zip_code=12345</code></p>
 
 <p>Il contenuto della risposta non verrà considerato. I codici di risposta &gt;= 300 saranno considerati come errori, quindi il sistema potrebbe ritentare l’invio della richiesta.</p>
+
+<blockquote>
+  <p><strong>Nota:</strong> dato che i lead provengono dalle aziende che, in Transactionale, svolgono il ruolo di publisher,
+quali dati sono effettivamente disponibili nella chiamata dipende da cosa il publisher riesce ad inviare.
+Riusciamo a garantire l’invio assolutamente certo di <code class="highlighter-rouge">ad_id</code> e <code class="highlighter-rouge">email</code>; riguardo i dati restanti, considerare
+sempre la possibilità che non siano sempre presenti.</p>
+</blockquote>
 
             </section>
         </div>
