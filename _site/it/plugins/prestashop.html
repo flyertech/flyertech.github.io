@@ -50,7 +50,7 @@
                     
                     <li >
                         
-                        <a href="/it/">Home</a>
+                        <a href="http://localhost:4000/it/">Home</a>
 
                         
                     </li>
@@ -58,19 +58,19 @@
                     
                     <li >
                         
-                        <a href="/it/engage">Acquisisci</a>
+                        <a href="http://localhost:4000/it/engage">Acquisisci</a>
 
                         
                         <ul>
                         
                         
                         <li  >
-                            <a href="/it/conversions-tracking">Tracciamento conversioni</a>
+                            <a href="http://localhost:4000/it/conversions-tracking">Tracciamento conversioni</a>
                         </li>
                         
                         
                         <li  >
-                            <a href="/it/webhook">Webhook</a>
+                            <a href="http://localhost:4000/it/webhook">Webhook</a>
                         </li>
                         
                         </ul>
@@ -80,7 +80,7 @@
                     
                     <li >
                         
-                        <a href="/it/monetize">Monetizza</a>
+                        <a href="http://localhost:4000/it/monetize">Monetizza</a>
 
                         
                     </li>
@@ -88,24 +88,24 @@
                     
                     <li >
                         
-                        <a href="/it/plugins">Configurazione dei Plugin</a>
+                        <a href="http://localhost:4000/it/plugins">Configurazione dei Plugin</a>
 
                         
                         <ul>
                         
                         
                         <li  >
-                            <a href="/it/plugins/magento">Magento</a>
+                            <a href="http://localhost:4000/it/plugins/magento">Magento</a>
                         </li>
                         
                         
                         <li  class="active">
-                            <a href="/it/plugins/prestashop">Prestashop</a>
+                            <a href="http://localhost:4000/it/plugins/prestashop">Prestashop</a>
                         </li>
                         
                         
                         <li  >
-                            <a href="/it/plugins/woocommerce">WooCommerce</a>
+                            <a href="http://localhost:4000/it/plugins/woocommerce">WooCommerce</a>
                         </li>
                         
                         </ul>
@@ -115,7 +115,7 @@
                     
                     <li >
                         
-                        <a href="/it/glossary">Glossario</a>
+                        <a href="http://localhost:4000/it/glossary">Glossario</a>
 
                         
                     </li>
@@ -132,48 +132,119 @@
 
 <p>Vai alla sezione <em>Moduli e Servizi</em>:</p>
 
-<p><img src="/assets/img/prestashop/modules_menu.png" /></p>
+<div class="img-responsive">
+  <img src="http://localhost:4000/assets/img/prestashop/modules_menu.png" />
+</div>
 
 <p>Clicca sul pulsante <em>Aggiungi nuovo modulo</em>:</p>
 
-<p><img src="/assets/img/prestashop/modules_buttons.png" /></p>
+<div class="img-responsive">
+  <img src="http://localhost:4000/assets/img/prestashop/modules_buttons.png" />
+</div>
 
 <p>Apparirà un form dove potrai caricare il file zip del modulo:</p>
 
-<p><img src="/assets/img/prestashop/module_upload.png" /></p>
+<div class="img-responsive">
+  <img src="http://localhost:4000/assets/img/prestashop/module_upload.png" />
+</div>
 
 <p>Dopo averlo installato, lo devi abilitare:</p>
 
-<p><img src="/assets/img/prestashop/module_installed.png" /></p>
+<div class="img-responsive">
+  <img src="http://localhost:4000/assets/img/prestashop/module_installed.png" />
+</div>
 
 <p>Ora cliccando su <em>Configura</em> appariranno le impostazioni del modulo:</p>
 
-<p><img src="/assets/img/prestashop/module_configuration.png" /></p>
+<div class="img-responsive">
+  <img src="http://localhost:4000/assets/img/prestashop/module_configuration.png" />
+</div>
 
-<h3 id="configurazione-del-modulo">Configurazione del modulo</h3>
+<h4 id="dettaglio-delle-impostazioni">Dettaglio delle impostazioni</h4>
 
-<p>Copia la tua API KEY dal tuo accout transactionale da My Account -&gt; Integration:</p>
+<table>
+  <tbody>
+    <tr>
+      <td><em>API KEY</em></td>
+      <td>necessario per identificare il tuo account. <strong>Segui le istruzioni qui sotto per compilarlo</strong>.</td>
+    </tr>
+    <tr>
+      <td><em>Codice nazione</em></td>
+      <td>il codice ISO a due lettere della nazione in cui opera il tuo shop. AD es. <em>IT</em>.</td>
+    </tr>
+    <tr>
+      <td><em>Stato</em></td>
+      <td>imposta su <em>Disabilitato</em> per disabilitare l’integrazione. Questo disabiliterà sia l’integrazione advertiser che publisher.</td>
+    </tr>
+    <tr>
+      <td><em>Abilita integrazione Advertiser</em></td>
+      <td>imposta su <em>Abilitato</em> per abilitare il popup di atterraggio quando gli utenti cliccano sulle tue campagne di acquisizione. E’ necessario solo se il popup è stato abilitato nelle tue campagne.</td>
+    </tr>
+    <tr>
+      <td><em>Abilita integrazione Publisher</em></td>
+      <td>usa il canale mail per inviare offerte ai tuoi utenti, sincronizzate con le tue mail di conferma ordine.</td>
+    </tr>
+    <tr>
+      <td><em>Abilita annunci in pagina di conferma ordine</em></td>
+      <td>imposta su <em>Disabled/Manual</em> se non vuoi mostrare offerte nella tua thank-you page, oppure se vuoi incollare a mano lo snippet di integrazione. Altrimenti seleziona il touchpoint web desiderato. <strong>ATTENZIONE</strong>: questo richiede che la funzionalità sia abilitata nel tuo account Transactionale.</td>
+    </tr>
+    <tr>
+      <td><em>Testo prima di annunci in pagina di conferma ordine</em></td>
+      <td>se usi il web touchpoint descritto sopra, puoi specificare il testo da mostrare prima delle offerte.</td>
+    </tr>
+    <tr>
+      <td><em>Trasmetti codice fiscale</em></td>
+      <td>imposta su <em>Abilitato</em> se vuoi trasmettere il codice fiscale dei tuoi clienti. Viene impiegato per determinare il sesso e l’età, qualora non esplicitamente compilati.</td>
+    </tr>
+    <tr>
+      <td><em>Trasmetti il sesso</em></td>
+      <td>imposta su <em>Abilitato</em> se vuoi consentire campagne targettizzate per sesso.</td>
+    </tr>
+    <tr>
+      <td><em>Trasmetti numero di telefono</em></td>
+      <td>imposta su <em>Abilitato</em> se vuoi condividere il numero di telefono con gli advertiser.</td>
+    </tr>
+    <tr>
+      <td><em>Snippet per annunci in pagina di conferma ordine</em></td>
+      <td>se si intende usare un web touchpoint manualmente, è possibile incollare qui lo snippet necessario.</td>
+    </tr>
+    <tr>
+      <td><em>Transactionale Host URL</em></td>
+      <td>Solo per debugging. Lasciare invariato.</td>
+    </tr>
+  </tbody>
+</table>
 
-<p><img src="/assets/img/integrate_api_key.png" /></p>
-
-<p>e incollala nel campo API KEY delle impostazioni del modulo.</p>
-
-<h3 id="dettaglio-delle-impostazioni">Dettaglio delle impostazioni</h3>
+<h3 id="ultimi-passi">Ultimi passi</h3>
 
 <ul>
-  <li><em>API KEY</em>: necessario per identificare il tuo account. Segui le istruzioni qui sopra per compilarlo.</li>
-  <li><em>Codice nazione</em>: il codice ISO a due lettere della nazione in cui opera il tuo shop. AD es. <em>IT</em>.</li>
-  <li><em>Stato</em>: imposta su <em>Disabilitato</em> per disabilitare l’integrazione. Questo disabiliterà sia l’integrazione advertiser che publisher.</li>
-  <li><em>Abilita integrazione Advertiser</em>: imposta su <em>Abilitato</em> per abilitare il popup di atterraggio quando gli utenti cliccano sulle tue campagne di acquisizione. E’ necessario solo se il popup è stato abilitato nelle tue campagne.</li>
-  <li><em>Abilita integrazione Publisher</em>: usa il canale mail per inviare offerte ai tuoi utenti, sincronizzate con le tue mail di conferma ordine.</li>
-  <li><em>Abilita annunci in pagina di conferma ordine</em>: imposta su <em>Disabled/Manual</em> se non vuoi mostrare offerte nella tua thank-you page, oppure se vuoi incollare a mano lo snippet di integrazione. Altrimenti seleziona il touchpoint web desiderato. <strong>ATTENZIONE</strong>: questo richiede che la funzionalità sia abilitata nel tuo account Transactionale.</li>
-  <li><em>Testo prima di annunci in pagina di conferma ordine</em>: se usi il web touchpoint descritto sopra, puoi specificare il testo da mostrare prima delle offerte.</li>
-  <li><em>Trasmetti codice fiscale</em>: imposta su <em>Abilitato</em> se vuoi trasmettere il codice fiscale dei tuoi clienti. Viene impiegato per determinare il sesso e l’età, qualora non esplicitamente compilati.</li>
-  <li><em>Trasmetti il sesso</em>: imposta su <em>Abilitato</em> se vuoi consentire campagne targettizzate per sesso.</li>
-  <li><em>Trasmetti numero di telefono</em>: imposta su <em>Abilitato</em> se vuoi condividere il numero di telefono con gli advertiser.</li>
-  <li><em>Snippet per annunci in pagina di conferma ordine</em>: se si intende usare un web touchpoint manualmente, è possibile incollare qui lo snippet necessario.</li>
-  <li><em>Transactionale Host URL</em>: Solo per debugging. Lasciare invariato.</li>
+  <li>
+    <p>Vai sul <strong>sito di Transactionale</strong>, nella pagina <strong>My Account -&gt; Integration</strong>.</p>
+  </li>
+  <li>
+    <p>Copia la tua <strong>API Key</strong> dalla maschera <strong>“Your API Key”</strong>. Invece di selezionare il testo puoi anche semplicemente cliccare sul tasto <strong>Copy</strong>.</p>
+  </li>
 </ul>
+
+<div class="img-responsive">
+  <img src="http://localhost:4000/assets/img/integrate_api_key.png" />
+</div>
+
+<ul>
+  <li>
+    <p><strong>Torna su Prestashop</strong></p>
+  </li>
+  <li>
+    <p>vai alla <strong>pagina di configurazione del modulo</strong></p>
+  </li>
+  <li>
+    <p><strong>incolla l’API Key</strong> che hai copiato prima nell’apposito campo.</p>
+  </li>
+</ul>
+
+<div class="img-responsive">
+  <img src="http://localhost:4000/assets/img/prestashop/api_key.png" />
+</div>
 
 
             </section>

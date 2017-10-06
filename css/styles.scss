@@ -185,3 +185,18 @@ hr {
     margin-left: 50px;
     margin-right: 50px;
 }
+
+div.img-responsive {
+    padding: 10px;
+    max-width: 100%;
+    border: 1px solid #cccccc;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    margin-bottom: 15px;
+    border-radius: 3px;
+    text-align: center;
+
+    img {
+        max-width: 100%;
+        margin: auto;
+    }
+}

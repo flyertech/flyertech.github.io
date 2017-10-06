@@ -31,17 +31,17 @@
         <div class="row">
             <aside class="col-md-3">
                 <p>
-                    Language:
+                    Lingua:
                 </p>
                 <ul class="nav nav-pills">
-                    <li class="active" >
-                        <a href="/iT/integrations/csharp">EN</a>
-                    </li>
                     <li>
-                        <a href="/it/iT/integrations/csharp">IT</a>
+                        <a href="/integrations/csharp">EN</a>
+                    </li>
+                    <li class="active" >
+                        <a href="/it/integrations/csharp">IT</a>
                     </li>
                     <!--li>
-                        <a href="/de/iT/integrations/csharp">DE</a>
+                        <a href="/de/integrations/csharp">DE</a>
                     </li-->
                 </ul>
                 <br>
@@ -50,7 +50,7 @@
                     
                     <li >
                         
-                        <a href="/">Home</a>
+                        <a href="http://localhost:4000/it/">Home</a>
 
                         
                     </li>
@@ -58,19 +58,19 @@
                     
                     <li >
                         
-                        <a href="/engage">Engage</a>
+                        <a href="http://localhost:4000/it/engage">Acquisisci</a>
 
                         
                         <ul>
                         
                         
                         <li  >
-                            <a href="/conversions-tracking">Conversion tracking</a>
+                            <a href="http://localhost:4000/it/conversions-tracking">Tracciamento conversioni</a>
                         </li>
                         
                         
                         <li  >
-                            <a href="/webhook">Webhook</a>
+                            <a href="http://localhost:4000/it/webhook">Webhook</a>
                         </li>
                         
                         </ul>
@@ -80,7 +80,7 @@
                     
                     <li >
                         
-                        <a href="/monetize">Monetize</a>
+                        <a href="http://localhost:4000/it/monetize">Monetizza</a>
 
                         
                     </li>
@@ -88,24 +88,24 @@
                     
                     <li >
                         
-                        <a href="/plugins">Plugins Configuration</a>
+                        <a href="http://localhost:4000/it/plugins">Configurazione dei Plugin</a>
 
                         
                         <ul>
                         
                         
                         <li  >
-                            <a href="/plugins/magento">Magento</a>
+                            <a href="http://localhost:4000/it/plugins/magento">Magento</a>
                         </li>
                         
                         
                         <li  >
-                            <a href="/plugins/prestashop">Prestashop</a>
+                            <a href="http://localhost:4000/it/plugins/prestashop">Prestashop</a>
                         </li>
                         
                         
                         <li  >
-                            <a href="/plugins/woocommerce">WooCommerce</a>
+                            <a href="http://localhost:4000/it/plugins/woocommerce">WooCommerce</a>
                         </li>
                         
                         </ul>
@@ -115,7 +115,7 @@
                     
                     <li >
                         
-                        <a href="/glossary">Glossary</a>
+                        <a href="http://localhost:4000/it/glossary">Glossario</a>
 
                         
                     </li>
@@ -125,13 +125,15 @@
             <section class="main col-md-9">
                 <h2>Esempio di integrazione C#</h2>
                 
-<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// These code snippets use an open-source library. http://unirest.io/net
-</span><span class="n">Task</span><span class="p">&lt;</span><span class="n">HttpResponse</span><span class="p">&lt;</span><span class="n">MyClass</span><span class="p">&gt;&gt;</span> <span class="n">response</span> <span class="p">=</span> <span class="n">Unirest</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="s">"https://www.transactionale.com/api/v1/transaction"</span><span class="p">)</span>
-  <span class="p">.</span><span class="nf">header</span><span class="p">(</span><span class="s">"X-Authorization"</span><span class="p">,</span> <span class="s">"YOUR_API_KEY"</span><span class="p">)</span>
-  <span class="p">.</span><span class="nf">header</span><span class="p">(</span><span class="s">"Content-Type"</span><span class="p">,</span> <span class="s">"application/json"</span><span class="p">)</span>
-  <span class="p">.</span><span class="nf">header</span><span class="p">(</span><span class="s">"Accept"</span><span class="p">,</span> <span class="s">"application/json"</span><span class="p">)</span>
-  <span class="p">.</span><span class="nf">body</span><span class="p">(</span><span class="s">"{ \"email\" : \"your-customer-email@mailprovider.com\", \"country\":\"it\", \"first_name\":\"customer-name\", \"zip_code\":\"00001\" }"</span><span class="p">)</span>
-  <span class="p">.</span><span class="nf">asJson</span><span class="p">();</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>curl -XPOST <span class="se">\
+</span>
+  -H <span class="s1">'X-Authorization: YOUR_API_KEY'</span> <span class="se">\
+</span>
+  -H <span class="s2">"Content-type: application/json"</span> <span class="se">\
+</span>
+  -d <span class="s1">'{ "email" : "your-customer-email@mailprovider.com", "country":"it", "first_name":"customer-name", "zip_code": "00001" }'</span> <span class="se">\
+</span>
+  <span class="s1">'https://www.transactionale.com/api/v1/transaction'</span></code></pre></figure>
 
 <h4 id="qualche-nota">Qualche nota</h4>
 

@@ -50,7 +50,7 @@
                     
                     <li >
                         
-                        <a href="/it/">Home</a>
+                        <a href="http://localhost:4000/it/">Home</a>
 
                         
                     </li>
@@ -58,19 +58,19 @@
                     
                     <li >
                         
-                        <a href="/it/engage">Acquisisci</a>
+                        <a href="http://localhost:4000/it/engage">Acquisisci</a>
 
                         
                         <ul>
                         
                         
                         <li  >
-                            <a href="/it/conversions-tracking">Tracciamento conversioni</a>
+                            <a href="http://localhost:4000/it/conversions-tracking">Tracciamento conversioni</a>
                         </li>
                         
                         
                         <li  >
-                            <a href="/it/webhook">Webhook</a>
+                            <a href="http://localhost:4000/it/webhook">Webhook</a>
                         </li>
                         
                         </ul>
@@ -80,7 +80,7 @@
                     
                     <li >
                         
-                        <a href="/it/monetize">Monetizza</a>
+                        <a href="http://localhost:4000/it/monetize">Monetizza</a>
 
                         
                     </li>
@@ -88,24 +88,24 @@
                     
                     <li >
                         
-                        <a href="/it/plugins">Configurazione dei Plugin</a>
+                        <a href="http://localhost:4000/it/plugins">Configurazione dei Plugin</a>
 
                         
                         <ul>
                         
                         
                         <li  >
-                            <a href="/it/plugins/magento">Magento</a>
+                            <a href="http://localhost:4000/it/plugins/magento">Magento</a>
                         </li>
                         
                         
                         <li  >
-                            <a href="/it/plugins/prestashop">Prestashop</a>
+                            <a href="http://localhost:4000/it/plugins/prestashop">Prestashop</a>
                         </li>
                         
                         
                         <li  class="active">
-                            <a href="/it/plugins/woocommerce">WooCommerce</a>
+                            <a href="http://localhost:4000/it/plugins/woocommerce">WooCommerce</a>
                         </li>
                         
                         </ul>
@@ -115,7 +115,7 @@
                     
                     <li >
                         
-                        <a href="/it/glossary">Glossario</a>
+                        <a href="http://localhost:4000/it/glossary">Glossario</a>
 
                         
                     </li>
@@ -132,47 +132,93 @@
 
 <p>Dal menù di WordPress, selezione Plugin -&gt; Aggiungi:</p>
 
-<p><img src="/assets/img/woocommerce/modules_menu.png" /></p>
+<div class="img-responsive"><img src="http://localhost:4000/assets/img/woocommerce/modules_menu.png" /></div>
 
 <p>Clicca sul pulsante <em>Carica plugin</em>:</p>
 
-<p><img src="/assets/img/woocommerce/module_upload_btn.png" /></p>
+<div class="img-responsive"><img src="http://localhost:4000/assets/img/woocommerce/module_upload_btn.png" /></div>
 
 <p>Apparirà un form. Seleziona il file zip del modulo per installarlo:</p>
 
-<p><img src="/assets/img/woocommerce/module_upload.png" /></p>
+<div class="img-responsive"><img src="http://localhost:4000/assets/img/woocommerce/module_upload.png" /></div>
 
 <p>Ora attiva il plugin:</p>
 
-<p><img src="/assets/img/woocommerce/module_activation.png" /></p>
+<div class="img-responsive"><img src="http://localhost:4000/assets/img/woocommerce/module_activation.png" /></div>
 
 <p>Vedrai il plugin nell’elenco dei plugin installati. Clicca su <em>Settings</em>:</p>
 
-<p><img src="/assets/img/woocommerce/module_entry.png" /></p>
+<div class="img-responsive"><img src="http://localhost:4000/assets/img/woocommerce/module_entry.png" /></div>
 
 <p>Apparirà la pagina delle impostazioni:</p>
 
-<p><img src="/assets/img/woocommerce/module_configuration.png" /></p>
+<div class="img-responsive"><img src="http://localhost:4000/assets/img/woocommerce/module_configuration.png" /></div>
+
+<h4 id="dettaglio-delle-impostazioni">Dettaglio delle impostazioni</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><em>Transactionale status</em></td>
+      <td>imposta su <em>disabled</em> per disattivare l’integrazione. Questo disattiverà sia l’integrazione advertier che publisher.</td>
+    </tr>
+    <tr>
+      <td><em>API KEY</em></td>
+      <td>è necessaria per identificare il tuo account. <strong>Segui le istruzioni qui sotto per compilarla.</strong></td>
+    </tr>
+    <tr>
+      <td><em>Country code</em></td>
+      <td>il codice ISO di due lettere della nazione in cui opera il tuo shop. Ad es. <em>IT</em></td>
+    </tr>
+    <tr>
+      <td><em>Pass phone</em></td>
+      <td>imposta su <em>Enabled</em> per condivider i numeri di telefono con gli advertiser.</td>
+    </tr>
+    <tr>
+      <td><em>Enable Transactional e-mail</em></td>
+      <td>usa il canale mail per inviare offerte ai tuoi utenti, sincronizzate con le tue mail di conferma ordine.</td>
+    </tr>
+    <tr>
+      <td><em>Web touchpoint snippet</em></td>
+      <td>se usi il web touchpoint, incolla qui lo snippet necessario.</td>
+    </tr>
+    <tr>
+      <td><em>Web touchpoint text</em></td>
+      <td>se usi il web touchpoint, puoi specificare qui il testo da mostrare prima delle offerte.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="configurazione-del-plugin">Configurazione del plugin</h3>
 
-<p>Copia la tua API Key dal tuo account Transactionale da My Account -&gt; Integration:</p>
+<ul>
+  <li>
+    <p>Vai sul <strong>sito di Transactionale</strong>, nella pagina <strong>My Account -&gt; Integration</strong>.</p>
+  </li>
+  <li>
+    <p>Copia la tua <strong>API Key</strong> dalla maschera <strong>“Your API Key”</strong>. Invece di selezionare il testo puoi anche semplicemente cliccare sul tasto <strong>Copy</strong>.</p>
+  </li>
+</ul>
 
-<p><img src="/assets/img/integrate_api_key.png" /></p>
-
-<p>e incollala nel campo API Key delle impostazioni del plugin.</p>
-
-<h3 id="dettaglio-delle-impostazioni">Dettaglio delle impostazioni</h3>
+<div class="img-responsive">
+  <img src="http://localhost:4000/assets/img/integrate_api_key.png" />
+</div>
 
 <ul>
-  <li><em>Transactionale status</em>: imposta su <em>disabled</em> per disattivare l’integrazione. Questo disattiverà sia l’integrazione advertier che publisher.</li>
-  <li><em>API KEY</em>: è necessaria per identificare il tuo account. Segui le istruzioni qui sopra per compilarla.</li>
-  <li><em>Country code</em>: il codice ISO di due lettere della nazione in cui opera il tuo shop. Ad es. <em>IT</em></li>
-  <li><em>Pass phone</em>: imposta su <em>Enabled</em> per condivider i numeri di telefono con gli advertiser.</li>
-  <li><em>Enable Transactional e-mail</em>: usa il canale mail per inviare offerte ai tuoi utenti, sincronizzate con le tue mail di conferma ordine.</li>
-  <li><em>Web touchpoint snippet</em>: se usi il web touchpoint, incolla qui lo snippet necessario.</li>
-  <li><em>Web touchpoint text</em>: se usi il web touchpoint, puoi specificare qui il testo da mostrare prima delle offerte.</li>
+  <li>
+    <p><strong>Torna su Wordpress</strong></p>
+  </li>
+  <li>
+    <p>vai alla <strong>pagina di configurazione del modulo Transactionale</strong></p>
+  </li>
+  <li>
+    <p><strong>incolla l’API Key</strong> che hai copiato prima nell’apposito campo.</p>
+  </li>
 </ul>
+
+<div class="img-responsive">
+  <img src="http://localhost:4000/assets/img/woocommerce/api_key.png" />
+</div>
 
 
             </section>
