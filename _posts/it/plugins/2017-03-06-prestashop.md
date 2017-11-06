@@ -9,6 +9,14 @@ lang: it
 
 Puoi scaricare la versione più recente dalla tua dashbaord andando su My Account -> Integration -> Click sul pulsante *Prestashop*.
 
+### Preparazione di Prestashop
+
+Per consentire l'attività di Publishing (monetizzazione) è necessario attivare l'opt-in di Prestashop, in modo da contattare solo i clienti che hanno fornito il consenso:
+
+<div class='img-responsive'>
+  <img src="{{ site.url }}/assets/img/prestashop/prestashop_optin.png" />
+</div>
+
 ### Installazione del modulo
 
 Vai alla sezione *Moduli e Servizi*:
